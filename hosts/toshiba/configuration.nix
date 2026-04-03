@@ -32,6 +32,7 @@
       "networkmanager"
       "kvm"
       "libvirtd"
+      "video"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [

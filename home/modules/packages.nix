@@ -40,6 +40,9 @@
     bluetui
     cava
     playerctl
+
+    # Zoom
+    zoom-us
   ];
 
   programs.fzf = {
