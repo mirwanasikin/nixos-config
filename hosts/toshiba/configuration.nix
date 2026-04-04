@@ -11,6 +11,23 @@
 
   boot.kernelPackages = pkgs.linuxPackages;
 
+  boot.initrd.secrets = {
+    "/etc/secrets/swap.key" = /etc/secrets/swap.key;
+  };
+
+  boot.initrd.luks.devices."swap" = {
+    device = "/dev/disk/by-uuid/eca7241b-b49e-4fdf-87bd-b5aa75ed75c4"; # UUID sda2 baru
+    keyFile = "/etc/secrets/swap.key";
+  };
+
+  swapDevices = [
+    {
+      device = "/dev/mapper/swap";
+    }
+  ];
+
+  boot.resumeDevice = "/dev/mapper/swap";
+
   networking.hostName = "toshiba";
   networking.networkmanager.enable = true;
 
