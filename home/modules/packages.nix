@@ -43,24 +43,14 @@
     cava
     playerctl
 
+    # Media $ Apps
+    google-chrome
+    mpv
+    imv
+
     # Communications
     zoom-us
     ferdium
     thunderbird
   ];
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }

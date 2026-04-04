@@ -7,9 +7,26 @@
 
 let
   homeDir = config.home.homeDirectory;
+  kdeConnectDeviceId = "ecc1eb827f474ec9af7e269c5dae053a";
 in
 
 {
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
 
@@ -92,8 +109,9 @@ in
 
       # Apps
       blue = "bluetui";
-      share = "kdeconnect-cli -d ecc1eb827f474ec9af7e269c5dae053a --share";
-      pair_device = "kdeconnect-cli --pair --device ecc1eb827f474ec9af7e269c5dae053a";
+      share = "kdeconnect-cli -d ${kdeConnectDeviceId} --share";
+      pair_device = "kdeconnect-cli --pair --device ${kdeConnectDeviceId}";
+      unpair_device = "kdeconnect-cli --unpair --device ${kdeConnectDeviceId}";
       list_device = "kdeconnect-cli --list-devices";
 
       # Complex
