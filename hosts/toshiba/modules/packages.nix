@@ -22,7 +22,6 @@
     rofi
     wlogout
     wayland-utils
-    dunst
     libnotify
 
     # Container Tools
@@ -43,6 +42,10 @@
     gdb
     strace
     lsof
+
+    # Compress
+    unzip
+    ouch
 
     # Theming
     catppuccin-sddm

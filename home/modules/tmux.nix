@@ -1,4 +1,5 @@
-{ ... }:
+{ pkgs, ... }:
+
 {
   programs.tmux = {
     enable = true;
@@ -11,6 +12,24 @@
 
     baseIndex = 1;
 
+    # -------------------------------------------------------
+    # Plugins — via Nix, no TPM needed
+    # -------------------------------------------------------
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+      {
+        plugin = catppuccin;
+        extraConfig = ''
+          set -g @catppuccin_flavor 'mocha'
+          set -g @catppuccin_status_background "none"
+          set -g @catppuccin_window_status_style "rounded"
+        '';
+      }
+    ];
+
+    # -------------------------------------------------------
+    # extraConfig
+    # -------------------------------------------------------
     extraConfig = ''
       # Terminal RGB
       set -ga terminal-overrides ",*:RGB"
@@ -77,16 +96,6 @@
       bind-key -T copy-mode-vi C-v send-keys -X rectangular-toggle
       bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
       unbind -T copy-mode-vi MouseDragEnd1Pane
-
-      # TPM
-      set-environment -g TMUX_PLUGIN_MANAGER_PATH "$HOME/.tmux/plugins/"
-      set -g @plugin 'tmux-plugins/tpm'
-      set -g @plugin 'tmux-plugins/tmux-sensible'
-      set -g @plugin 'catppuccin/tmux#v2.1.3'
-
-      set -g @catppuccin_flavor 'mocha'
-
-      run '~/.tmux/plugins/tpm/tpm'
     '';
   };
 }

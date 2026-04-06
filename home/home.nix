@@ -15,6 +15,11 @@
     ./modules/git.nix
     ./modules/ssh.nix
     ./modules/services.nix
+    ./modules/bat.nix
+    ./modules/btop.nix
+    ./modules/swaylock.nix
+    ./modules/yazi.nix
+    ./modules/dunst.nix
   ];
 
   home.username = "irwan";

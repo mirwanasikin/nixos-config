@@ -7,21 +7,16 @@
     fd
     fzf
     ripgrep
-    yazi
-    bat
     glow
     hyperfine
-    delta
     watchexec
 
     # System monitoring
-    btop
     htop
     duf
     ncdu
     dust
     speedtest-cli
-    ouch
     nix-output-monitor
     nvd
     nh

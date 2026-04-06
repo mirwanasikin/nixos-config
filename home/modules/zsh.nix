@@ -25,6 +25,7 @@ in
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+    settings = builtins.fromTOML (builtins.readFile ../../dotfiles/starship.toml);
   };
 
   programs.zsh = {
@@ -52,7 +53,7 @@ in
         export GPG_TTY=$(tty)
 
         if [[ -z "$SSH_CONNECTION" ]]; then
-          fastfetch -c examples/13 
+          fastfetch -c examples/13
         fi
 
         if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
@@ -115,8 +116,6 @@ in
 
       # Complex
       vif = "fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always {}' | xargs nvim";
-      snvim = ''sudo env "PATH=$HOME/.nix-profile/bin:$PATH" nvim -u ${homeDir}/.config/nvim/init.lua'';
-
     };
   };
 }
