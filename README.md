@@ -30,8 +30,10 @@ Inside is less GUI software and mostly just CLI tools
 
 - Window Manager : Sway
 - Display Manager : Sddm
+- Terminal : foot
 - Shell : zsh (Heavy Configured in nix, check the [zsh.nix](./home/modules/zsh.nix) first)
-- Browser : Google Chrome
+- Browser : Firefox
+- Email : Thunderbird
 - Media : Spotify with spicetify, mpv and imv
 - Dotfiles : rofi, waybar, sway, dunst, etc (check my [dotfiles](./dotfiles) folder)
 
@@ -42,6 +44,7 @@ Inside is less GUI software and mostly just CLI tools
 Feel free to:
 
 - Replace CLI tools with GUI alternatives
+- Replace Window Manager for example hyprland
 - Add your preferred IDE (since i just using neovim)
 - Enable SSH if you need
 
