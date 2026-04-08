@@ -58,6 +58,7 @@
     proton-vpn
     mpv
     imv
+    obsidian
 
     # Communications
     zoom-us

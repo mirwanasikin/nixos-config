@@ -30,6 +30,8 @@
     podman-compose
     buildah
     skopeo
+    docker
+    docker-compose
 
     # Hardware Tools
     pciutils

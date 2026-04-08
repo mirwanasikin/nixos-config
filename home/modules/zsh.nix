@@ -115,8 +115,6 @@ in
 
       # Complex
       vif = "fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always {}' | xargs nvim";
-      snvim = ''sudo env "PATH=$HOME/.nix-profile/bin:$PATH" nvim -u ${homeDir}/.config/nvim/init.lua'';
-
     };
   };
 }
