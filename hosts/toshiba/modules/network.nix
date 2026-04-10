@@ -11,7 +11,7 @@
     settings = {
       Resolve = {
         DNS = "1.1.1.1 9.9.9.9";
-        DNSOverTLS = "yes";
+        DNSOverTLS = "no";
         DNSSEC = "false";
         LLMNR = "false";
       };
