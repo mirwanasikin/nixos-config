@@ -34,6 +34,7 @@
     terragrunt
     helm
     jq
+    mods
     awscli2
     ssm-session-manager-plugin
     ansible
