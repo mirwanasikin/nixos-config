@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -49,6 +49,7 @@
     # Cert
     mkcert
     nssTools
+    inputs.agenix.packages."x86_64-linux".default
 
     # Theming
     catppuccin-sddm

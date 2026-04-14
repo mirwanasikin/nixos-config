@@ -2,8 +2,18 @@
 result
 result-*
 
-# Secrets 
-secrets.nix 
-*.age
-*.pem
+# SSH & PEM 
+*.pem 
 *.key
+key_github_irwan
+id_nixos
+id_nixos.pub
+
+# Credentials
+.aws/
+credentials
+
+# Agenx
+!secrets/
+!secrets/*.age
+!secrets/secrets.nix

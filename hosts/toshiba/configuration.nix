@@ -13,6 +13,7 @@
     ./modules/services.nix
     ./modules/users.nix
     ./modules/settings.nix
+    ./modules/agenix.nix
   ];
 
 }
