@@ -50,8 +50,8 @@
     bluetui
 
     # Media $ Apps
-    firefox
     proton-vpn
+    brave
     mpv
     imv
     obsidian

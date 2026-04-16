@@ -49,8 +49,6 @@ in
       '')
 
       ''
-        export GPG_TTY=$(tty)
-
         if [[ -z "$SSH_CONNECTION" ]]; then
           fastfetch -c examples/13 
         fi

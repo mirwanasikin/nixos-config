@@ -11,9 +11,11 @@
     settings = {
       Resolve = {
         DNS = "1.1.1.1 9.9.9.9";
+        FallbackDNS = "1.0.0.1 149.112.112.112";
         DNSOverTLS = "no";
         DNSSEC = "false";
         LLMNR = "false";
+        Domains = "~.";
       };
     };
   };
@@ -21,17 +23,6 @@
   # Firewall & KDE Connect
   networking.firewall = {
     enable = true;
-    allowedTCPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      }
-    ];
-    allowedUDPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      }
-    ];
+    trustedInterfaces = [ "tailscale0" ];
   };
 }

@@ -29,4 +29,7 @@
     enable = true;
     role = "server";
   };
+
+  # TailScale
+  services.tailscale.enable = true;
 }
