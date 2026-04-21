@@ -2,23 +2,23 @@
 
 {
   # Containers Podman
-  virtualisation.containers.enable = true;
+  virtualisation.containers.enable = false;
   virtualisation.containers.policy = {
     default = [ { type = "insecureAcceptAnything"; } ];
   };
 
   # Containers Docker
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
 
   # Libvirt / QEMU
   virtualisation.libvirtd = {
-    enable = true;
+    enable = false;
     qemu = {
       package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
+      runAsRoot = false;
+      swtpm.enable = false;
     };
   };
 
-  programs.virt-manager.enable = true;
+  programs.virt-manager.enable = false;
 }
