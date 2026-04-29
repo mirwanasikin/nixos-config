@@ -7,7 +7,7 @@
         font = "FiraCode Nerd Font:size=12";
       };
       colors-dark = {
-        alpha = "1.0";
+        alpha = "0.9";
         background = "1e1e2e";
         foreground = "cdd6f4";
         cursor = "11111b f5e0dc";
