@@ -50,7 +50,7 @@ in
 
       ''
         if [[ -z "$SSH_CONNECTION" ]]; then
-          fastfetch -c examples/13 
+          fastfetch
         fi
 
         if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then

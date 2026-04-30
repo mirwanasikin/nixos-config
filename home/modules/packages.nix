@@ -13,6 +13,8 @@
     hyperfine
     delta
     watchexec
+    ouch
+    unrar
 
     # System monitoring
     btop
@@ -21,7 +23,6 @@
     ncdu
     dust
     speedtest-cli
-    ouch
     nix-output-monitor
     nvd
     nh
@@ -50,7 +51,7 @@
     atuin
     bluetui
 
-    # Media $ Apps
+    # Media & Apps
     proton-vpn
     brave
     mpv
@@ -59,6 +60,7 @@
     cava
     todoist-electron
     playerctl
+    zathura
 
     # Communications
     zoom-us

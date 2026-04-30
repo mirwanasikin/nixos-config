@@ -12,7 +12,7 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
   outputs =
