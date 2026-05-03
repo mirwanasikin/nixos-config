@@ -7,6 +7,7 @@ return {
       yamlls = { mason = false },
       dockerls = { mason = false },
       docker_compose_language_service = { mason = false },
+      clangd = { mason = false },
       terraformls = { mason = false },
     },
   },

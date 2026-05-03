@@ -34,5 +34,10 @@
     # Markdown
     markdownlint-cli2
     marksman
+
+    # C
+    clang-tools
+    cppcheck
+    bear
   ];
 }

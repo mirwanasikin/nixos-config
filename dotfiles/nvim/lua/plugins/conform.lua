@@ -7,6 +7,7 @@ return {
       yaml = { "prettier" },
       dockerfile = { "prettier" },
       python = { "ruff_format" },
+      c = { "clang_format" },
     },
   },
 }
