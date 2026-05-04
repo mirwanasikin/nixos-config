@@ -23,6 +23,16 @@
       agenix,
       ...
     }@inputs:
+    let
+      hmModule = {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          extraSpecialArgs = { inherit inputs agenix; };
+          users.irwan = import ./home/home.nix;
+        };
+      };
+    in
     {
       nixosConfigurations.toshiba = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -31,14 +41,7 @@
           ./hosts/toshiba/configuration.nix
           home-manager.nixosModules.home-manager
           agenix.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs agenix; };
-              users.irwan = import ./home/home.nix;
-            };
-          }
+          hmModule
         ];
       };
     };
