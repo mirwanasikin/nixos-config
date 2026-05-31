@@ -23,6 +23,7 @@
   home.username = "irwan";
   home.homeDirectory = "/home/irwan";
   home.stateVersion = "25.11";
+  home.enableNixpkgsReleaseCheck = false;
 
   programs.home-manager.enable = true;
 }

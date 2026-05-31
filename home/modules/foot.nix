@@ -1,10 +1,5 @@
 { ... }:
 {
-  catppuccin.foot = {
-    enable = true;
-    flavor = "mocha";
-  };
-
   programs.foot = {
     enable = true;
     settings = {

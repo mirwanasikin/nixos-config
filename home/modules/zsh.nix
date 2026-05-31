@@ -16,17 +16,6 @@ in
     enableZshIntegration = true;
   };
 
-  catppuccin.atuin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "mauve";
-  };
-
-  catppuccin.zsh-syntax-highlighting = {
-    enable = true;
-    flavor = "mocha";
-  };
-
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;

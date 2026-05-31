@@ -4,9 +4,9 @@
     enable = true;
     gtk4.theme = config.gtk.theme;
     theme = {
-      name = "catppuccin-mocha-blue-standard";
+      name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
+        accents = [ "mauve" ];
         variant = "mocha";
       };
     };
