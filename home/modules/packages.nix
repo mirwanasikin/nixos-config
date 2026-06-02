@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -57,6 +57,7 @@
     cava
     playerctl
     zathura
+    gowall
 
     # Communications
     thunderbird

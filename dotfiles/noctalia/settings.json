@@ -665,7 +665,7 @@
         "favorites": [
         ],
         "fillColor": "#000000",
-        "fillMode": "crop",
+        "fillMode": "repeat",
         "hideWallpaperFilenames": false,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
