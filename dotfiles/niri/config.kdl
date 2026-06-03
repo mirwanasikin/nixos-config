@@ -166,6 +166,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: noctalia-shell" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: Noctalia Lock " { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
+    Super+Shift+O { spawn-sh "noctalia-shell ipc call launcher emoji"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

@@ -59,11 +59,7 @@ in
 
       ''
         if [[ -z "$SSH_CONNECTION" ]]; then
-          fastfetch
-        fi
-
-        if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-          exec dbus-run-session sway
+          nitch
         fi
       ''
     ];

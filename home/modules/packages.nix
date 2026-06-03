@@ -45,9 +45,9 @@
 
     # Shell utilities
     tldr
-    fastfetch
     figlet
     bluetui
+    nitch
 
     # Media & Apps
     proton-vpn

@@ -16,9 +16,9 @@
 
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
-  # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
+  # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
 
   # Binary cache
   nix.settings.substituters = [
