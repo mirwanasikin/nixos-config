@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [
@@ -16,7 +20,8 @@
 
     # Niri
     niri
-    noctalia-shell
+    # noctalia-shell
+    (inputs.noctalia-v5.packages.${pkgs.system}.default)
     xwayland-satellite
     wayland-utils
     libnotify

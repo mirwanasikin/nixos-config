@@ -45,7 +45,7 @@
 
     # Shell utilities
     tldr
-    fastfetch
+    nitch
     figlet
     bluetui
 
