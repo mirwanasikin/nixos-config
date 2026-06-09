@@ -13,6 +13,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia-v5 = {
+      url = "github:noctalia-dev/noctalia-shell/v5";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix.url = "github:ryantm/agenix";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
@@ -29,6 +34,7 @@
       home-manager,
       agenix,
       catppuccin,
+      noctalia-v5,
       ...
     }@inputs:
     let
@@ -42,6 +48,7 @@
             imports = [
               ./home/home.nix
               inputs.catppuccin.homeModules.catppuccin
+              inputs.noctalia-v5.homeModules.default
             ];
           };
         };

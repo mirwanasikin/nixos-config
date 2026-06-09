@@ -1,0 +1,162 @@
+[bar.default]
+center = [ "workspaces" ]
+end = [ "cpu", "ram", "notifications", "network", "bluetooth", "volume", "battery" ]
+font_weight = 700
+layer = "top"
+margin_edge = 5
+margin_ends = 80
+panel_overlap = 0
+radius = 14
+shadow = false
+start = [ "date", "clock", "media", "active_window" ]
+thickness = 30
+
+[dock]
+shadow = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660
+
+[location]
+address = "Palangka Raya, Indonesia"
+
+[lockscreen]
+blur_intensity = 0.0
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@LVDS-1", "lockscreen-widget-0000000000000001", "lockscreen-widget-0000000000000002" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@LVDS-1"]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 683.0
+    cy = 645.0
+    output = "LVDS-1"
+    rotation = 0.0
+    type = "login_box"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 683.0
+    cy = 106.0
+    output = "LVDS-1"
+    rotation = 0.0
+    type = "clock"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 683.0
+    cy = 512.0
+    output = "LVDS-1"
+    rotation = 0.0
+    type = "media_player"
+
+[shell]
+app_icon_color = "on_primary"
+corner_radius_scale = 0.95000001415610313
+font_family = "JetBrainsMono NF"
+settings_show_advanced = true
+telemetry_enabled = false
+
+    [shell.panel]
+    borders = false
+    control_center_placement = "floating"
+    launcher_placement = "floating"
+    session_placement = "floating"
+    shadow = false
+
+    [[shell.session.actions]]
+    action = "lock"
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    enabled = true
+    glyph = "suspend"
+    label = "Suspend"
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "command"
+    command = "noctalia msg session lock && systemctl hibernate"
+    enabled = true
+    glyph = "zzz"
+    label = "Hibernate"
+    shortcut = "5"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    enabled = true
+    shortcut = "6"
+    variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Lavender"
+custom_palette = "Ayu"
+wallpaper_scheme = "ADW"
+
+[wallpaper]
+directory = "/home/irwan/.config/wallpaper"
+edge_smoothness = 0.0
+
+    [wallpaper.default]
+    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+
+    [wallpaper.last]
+    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+
+    [wallpaper.monitors.LVDS-1]
+    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+
+[widget.network]
+show_label = false
+
+[widget.sysmon]
+stat = "disk_pct"
+
+[widget.volume]
+show_label = false

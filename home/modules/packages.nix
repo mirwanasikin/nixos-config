@@ -45,6 +45,7 @@
 
     # Shell utilities
     tldr
+    nitch
     figlet
     bluetui
     nitch
