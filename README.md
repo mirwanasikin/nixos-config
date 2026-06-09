@@ -11,50 +11,55 @@
 
 ---
 
+> [!CAUTION]
+> This configuration is using NixOS nixpkgs master branch so there is the risk of not having binary cache inside. I still not sure is it work on your machine or not but I can make sure it will make your machine compile sometimes so if you don't want to compile it's better to use unstable or stable channel
+
 > [!IMPORTANT]
-> This configuration is tailored for personal use and may not suit for everyone. Use it as a reference, not a universal solution. Inside is less GUI software and mostly just CLI tools. If you prefer using more GUI tools you can change the config file
+> This configuration is using agenix and heavy on my workflow so don't blindly copy my configuration, use it as a reference, not a universal solution. Inside is mostly are CLI tools.
 
 ---
 
-## 🧠 Philosopy
+## 🧠 Philosophy
 
-This setup prioritizes:
+Setup priorities:
 
-- **Simplicity** - less is more
-- **Reproducibility** - flake based, fully declarative _some of my dotfiles are out of store symlink_
-- **keyboard-driven workflow** - because I'm typing with my 10 finger
-- **Terminal centric style** - mostly I use CLI tools, but you can change that if you want.
-- **Low resource usage** - Optimized for my old laptop
+- **Simplicity** - Less is more
+- **Reproducibility** - Flake based _sound's cool but it's just the answer of my laziness to setup my new machine so I choose to keep it easier_
+- **Keyboard Driven** - I'm typing with my 10 finger so it's suitable for me
+- **Terminal Centric** - Easy typing with 10 finger and then terminal is all in one tool
+- **Low Resource Usage** - I'm using 2010 Laptop BTW.
 
 ---
 
-## 📦 What's Inside
+## 📦 Package I'm Using
 
-Here's my packages I used the most and my configuration
-
-| Category          | Choice                                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
-| `Kernel`          | [CachyOS LTS](https://github.com/xddxdd/nix-cachyos-kernel)             |
-| `Window Manager`  | Niri                                                                    |
-| `Display Manager` | Sddm                                                                    |
-| `Terminal`        | Foot                                                                    |
-| `Shell`           | zsh                                                                     |
-| `Browser`         | [Helium](https://github.com/oxcl/nix-flake-helium-browser)              |
-| `Media`           | [Spotify with Spicetify Patch](https://github.com/Gerg-L/spicetify-nix) |
+Here's the package or software I mainly use in my workflow
+| Category | Choice | Reason |
+| -------- | ------ | ------ |
+| `Kernel` | Kernel Linux LTS/Kernel CachyOS LTS | It's an old laptop so LTS kernel its more suitable |
+| `DE/WM` | Niri + Noctalia Shell v5 | Niri is compatible with my workflow and also Noctalia shell v5 is simple |
+| `Display Manager` | sddm | I'm using Catppuccin theme and sddm is easy to customize |
+| `Terminal` | Foot | I can't use kitty, alacritty can't render picture or emoji |
+| `Browser` | Helium Browser | Lightweight and also having adblocker by default |
+| `Media` | Spotify | Well it's kinda easier and legal |
+| `Text Editor` | Neovim | Well its lovable for 10 typing finger enjoyer |
+| `Note Taking` | Obsidian | It's doing well since I'm used to markdown format |
 
 > [!NOTE]
-> Some of the packages are having links to the flake I'm using or you can just see my [Flake.nix](./flake.nix) instead.
-
-> [!TIP]
-> Also if you want to see my dotfiles you can check my [zsh config](./home/modules/zsh.nix) [Dotfiles](./home/modules/dotfiles.nix) or [My Symlink](./home/modules/symlink.nix)
+> Some packages are using community flakes so before you try to install it's better to check my [Flake](./flake.nix) first.
 
 ---
 
-## 🛠️ Customization
+## ⚙️ Tools I use
 
-Feel free to:
+Okay let's get a little bit serious, so of course I'm using some tools for development or DevOps and here's my tools i mainly use
 
-- Replace CLI tools with GUI alternative.
-- Replace Window Manager for Example Hyprland or Desktop Environment like KDE Plasma.
-- Add your prefered IDE (since i just using neovim).
-- Enable SSH if you want to
+- **Terraform/OpenTofu** - Right now I'm mostly use OpenTofu due to license and it's open source
+- **Ansbile** - For configuration management in Cloud Service
+- **AWS CLI** - AWS workflow like searching for AMI or looking which instance alive
+- **Kubectl** - For kubernetes setup
+- **Docker/Podman** - Container testing
+
+---
+
+If you ever interested with my setup you can copy a little bit and change the config like you want. Feel free to be references. peace.
