@@ -2,7 +2,8 @@
   description = "Irwan NixOS Setup";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
+    # nixpkgs.url = "github:NixOS/nixpkgs/master";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,13 +15,16 @@
     };
 
     noctalia-v5 = {
-      url = "github:noctalia-dev/noctalia-shell/v5";
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     agenix.url = "github:ryantm/agenix";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix/aad629e8";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
