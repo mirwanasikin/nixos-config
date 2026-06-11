@@ -6,7 +6,7 @@
 
 {
   # NixOS Kernel
-  # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
+  boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
 
   # Kernel Cachy
@@ -14,7 +14,9 @@
     inputs.nix-cachyos-kernel.overlays.pinned
   ];
 
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
+  hardware.deviceTree.enable = false;
+
+  # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
