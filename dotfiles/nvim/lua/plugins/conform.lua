@@ -5,7 +5,7 @@ return {
       nix = { "nixfmt" },
       terraform = { "terraform_fmt" },
       yaml = { "prettier" },
-      dockerfile = { "prettier" },
+      dockerfile = {},
       python = { "ruff_format" },
       c = { "clang_format" },
     },

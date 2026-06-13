@@ -43,5 +43,6 @@
     clang-tools
     cppcheck
     bear
+
   ];
 }
