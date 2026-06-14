@@ -7,10 +7,16 @@
   services.displayManager.defaultSession = "niri";
 
   # SDDm
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    theme = "catppuccin-mocha-mauve";
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "catppuccin-mocha-mauve";
+    };
+    autoLogin = {
+      enable = true;
+      user = "irwan";
+    };
   };
 
   # XDG Portals
