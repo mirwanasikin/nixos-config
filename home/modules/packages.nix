@@ -41,6 +41,7 @@
     opentofu
     kdePackages.kdeconnect-kde
     kubectl
+    kubeseal
     gitlab-ci-local
 
     # Shell utilities
