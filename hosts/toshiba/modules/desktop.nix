@@ -13,10 +13,6 @@
       wayland.enable = true;
       theme = "catppuccin-mocha-mauve";
     };
-    autoLogin = {
-      enable = true;
-      user = "irwan";
-    };
   };
 
   # XDG Portals
@@ -42,4 +38,12 @@
     nerd-fonts.meslo-lg
     nerd-fonts.jetbrains-mono
   ];
+
+  # Noctalia Cache
+  nix.settings = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
 }
