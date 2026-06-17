@@ -6,7 +6,7 @@
 
 {
   # NixOS Kernel
-  # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
+  boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
 
   # Kernel Cachy
@@ -18,7 +18,7 @@
 
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
+  # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
 

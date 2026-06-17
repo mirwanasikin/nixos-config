@@ -22,7 +22,7 @@
 
   # Gitlab Runner
   services.gitlab-runner = {
-    enable = true;
+    enable = false;
     settings = {
       concurrent = 1;
     };
