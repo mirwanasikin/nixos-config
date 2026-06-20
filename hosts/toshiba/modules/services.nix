@@ -22,10 +22,8 @@
 
   # Gitlab Runner
   services.gitlab-runner = {
-    enable = false;
-    settings = {
-      concurrent = 1;
-    };
+    enable = true;
+    configFile = "/etc/gitlab-runner/config.toml";
   };
 
   # Battery
