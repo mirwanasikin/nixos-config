@@ -39,10 +39,9 @@
     ansible
     terraform
     opentofu
-    # kdePackages.kdeconnect-kde
+    devenv
     kubectl
     kubeseal
-    # gitlab-ci-local
 
     # Shell utilities
     tldr
