@@ -9,4 +9,6 @@ in
   "aws_creds.age".publicKeys = [ master ];
 
   "gitlab_key.age".publicKeys = [ master ];
+
+  "codeberg_key.age".publicKeys = [ master ];
 }
