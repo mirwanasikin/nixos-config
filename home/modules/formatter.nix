@@ -30,6 +30,8 @@
     # terrafrom
     terraform-ls
     tflint
+    checkov
+    pre-commit
 
     # tofu
     tofu-ls
@@ -45,4 +47,5 @@
     bear
 
   ];
+
 }
