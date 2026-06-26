@@ -59,6 +59,7 @@
     playerctl
     zathura
     gowall
+    brave
 
     # Communications
     thunderbird

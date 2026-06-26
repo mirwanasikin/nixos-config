@@ -15,9 +15,9 @@
       "image/webp" = "imv.desktop";
       "image/svg+xml" = "imv.desktop";
       "text/html" = "helium.desktop";
-      "applications/xhtml-xml" = "helium.desktop";
-      "x-scheme-handler/http" = "helium.desktop";
-      "x-scheme-handler/https" = "helium.desktop";
+      "applications/xhtml-xml" = "brave.desktop";
+      "x-scheme-handler/http" = "brave.desktop";
+      "x-scheme-handler/https" = "brave.desktop";
     };
   };
 }

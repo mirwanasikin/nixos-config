@@ -15,7 +15,6 @@
     ./modules/git.nix
     ./modules/ssh.nix
     ./modules/services.nix
-    ./modules/helium.nix
     ./modules/wf-recorder.nix
     ./modules/symlink.nix
   ];
@@ -23,7 +22,6 @@
   home.username = "irwan";
   home.homeDirectory = "/home/irwan";
   home.stateVersion = "25.11";
-  # home.enableNixpkgsReleaseCheck = false;
 
   programs.home-manager.enable = true;
 }
