@@ -40,7 +40,7 @@ Here's the package or software I mainly use in my workflow
 | `DE/WM` | Niri + Noctalia Shell v5 | Niri is compatible with my workflow and also Noctalia shell v5 is simple |
 | `Display Manager` | sddm | I'm using Catppuccin theme and sddm is easy to customize |
 | `Terminal` | Foot | I can't use kitty, alacritty can't render picture or emoji |
-| `Browser` | Brave Browser | I'm using origin version |
+| `Browser` | Firefox | Traditonal |
 | `Media` | Spotify | Well it's kinda easier and legal |
 | `Text Editor` | Neovim | Well its lovable for 10 typing finger enjoyer |
 | `Note Taking` | Obsidian | It's doing well since I'm used to markdown format |

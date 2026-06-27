@@ -21,6 +21,8 @@ in
     enableZshIntegration = true;
   };
 
+  programs.fzf.historyWidget.zsh.command = "";
+
   catppuccin.fzf = {
     enable = true;
     flavor = "mocha";
@@ -59,7 +61,7 @@ in
 
       ''
         if [[ -z "$SSH_CONNECTION" ]]; then
-          nitch
+          fastfetch
         fi
       ''
     ];

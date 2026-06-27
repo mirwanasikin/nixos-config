@@ -45,10 +45,9 @@
 
     # Shell utilities
     tldr
-    nitch
+    fastfetch
     figlet
     bluetui
-    nitch
 
     # Media & Apps
     proton-vpn
@@ -59,11 +58,12 @@
     playerctl
     zathura
     gowall
-    brave
 
     # Communications
     thunderbird
 
+    # testing
+    (pkgs.callPackage ./brave-origin.nix { })
   ];
 
 }

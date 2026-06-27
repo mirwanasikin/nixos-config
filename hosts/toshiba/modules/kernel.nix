@@ -1,13 +1,32 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 
 {
   # NixOS Kernel
-  boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
+  # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
+
+  # Kernel Compile
+  boot.kernelPackages = pkgs.linuxPackagesFor (
+    pkgs.buildLinux {
+      version = "7.2-rc1";
+      modDirVersion = "7.2.0-rc1";
+
+      src = pkgs.fetchurl {
+        url = "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-7.2-rc1.tar.gz";
+        hash = "sha256-tGDnTPoKQoQWiBBjgh72quimpMaYkbmrEPz07fdwzg0=";
+      };
+
+      configfile = config.boot.kernelPackages.kernel.configfile;
+      allowImportFromDerivation = true;
+      ignoreConfigErrors = true;
+      kernelPatches = [ ];
+    }
+  );
 
   # Kernel Cachy
   nixpkgs.overlays = [

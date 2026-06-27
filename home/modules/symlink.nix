@@ -9,6 +9,7 @@ let
     wallpaper = "wallpaper";
     niri = "niri";
     noctalia = "noctalia";
+    fastfetch = "fastfetch";
   };
 
 in
