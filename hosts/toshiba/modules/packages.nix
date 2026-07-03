@@ -39,6 +39,7 @@
     usbutils
     binutils
     smartmontools
+    brightnessctl
 
     # Debug Forensics
     gcc
