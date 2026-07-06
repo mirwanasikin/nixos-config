@@ -10,6 +10,7 @@ return {
       clangd = { mason = false },
       terraformls = { mason = false },
       tofuls = { mason = false },
+      tinymst = { mason = false },
     },
   },
 }

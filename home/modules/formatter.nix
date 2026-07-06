@@ -46,6 +46,8 @@
     cppcheck
     bear
 
+    # Typst
+    typst
+    tinymist
   ];
-
 }

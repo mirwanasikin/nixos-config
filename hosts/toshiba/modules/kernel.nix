@@ -13,12 +13,12 @@
   # Kernel Compile
   # boot.kernelPackages = pkgs.linuxPackagesFor (
   #   pkgs.buildLinux {
-  #     version = "7.2-rc1";
-  #     modDirVersion = "7.2.0-rc1";
+  #     version = "7.2-rc2";
+  #     modDirVersion = "7.2.0-rc2";
   #
   #     src = pkgs.fetchurl {
-  #       url = "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-7.2-rc1.tar.gz";
-  #       hash = "sha256-tGDnTPoKQoQWiBBjgh72quimpMaYkbmrEPz07fdwzg0=";
+  #       url = "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-7.2-rc2.tar.gz";
+  #       hash = "sha256-HsfZTdYNxjJczbeZfzFz6rSeFNJiokhrmAKKociSbOY=";
   #     };
   #
   #     configfile = config.boot.kernelPackages.kernel.configfile;
