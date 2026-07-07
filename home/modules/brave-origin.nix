@@ -3,6 +3,7 @@
 }:
 
 with pkgs;
+
 let
   libs = [
     alsa-lib
@@ -37,8 +38,16 @@ let
 in
 
 stdenv.mkDerivation rec {
-  pname = "brave-origin";
-  version = "1.92.134";
+  pname = "brave-origin-nightly";
+  version = "1.94.40";
+
+  src = fetchurl {
+    url = "https://brave-browser-apt-nightly.s3.brave.com/pool/main/b/brave-origin-nightly/brave-origin-nightly_${version}_amd64.deb";
+
+    hash = "sha256-40ydFhbnjyGsGBducRnxK4XwrD4lYew7tkppalDo3QM=";
+  };
+
+  sourceRoot = ".";
 
   autoPatchelfIgnoreMissingDeps = [
     "libQt5Core.so.5"
@@ -49,14 +58,6 @@ stdenv.mkDerivation rec {
     "libQt6Gui.so.6"
     "libQt6Widgets.so.6"
   ];
-
-  src = fetchurl {
-    url = "https://brave-browser-apt-release.s3.brave.com/pool/main/b/brave-origin/brave-origin_${version}_amd64.deb";
-
-    hash = "sha256-bK6xySoA3guMdWDA/UUCrTTF2jbqqapcUL0VtxcCebs=";
-  };
-
-  sourceRoot = ".";
 
   nativeBuildInputs = [
     dpkg
@@ -70,57 +71,55 @@ stdenv.mkDerivation rec {
   unpackPhase = ''
     runHook preUnpack
 
-    ar x $src
+    ar x "$src"
     tar --no-same-owner --no-same-permissions -xf data.tar.xz
 
     runHook postUnpack
   '';
 
   installPhase = ''
-     runHook preInstall
+    runHook preInstall
 
-     mkdir -p $out/opt
-     cp -r opt/brave.com $out/opt/
+    mkdir -p $out/opt
+    cp -r opt/brave.com $out/opt/
 
-     mkdir -p $out/share
-     cp -r usr/share/* $out/share/
+    mkdir -p $out/share
+    cp -r usr/share/* $out/share/
 
-     mkdir -p $out/bin
+    mkdir -p $out/bin
 
-     ln -s \
-       $out/opt/brave.com/brave-origin/brave-origin \
-       $out/bin/brave-origin
+    ln -s \
+      $out/opt/brave.com/brave-origin-nightly/brave-origin-nightly \
+      $out/bin/brave-origin-nightly
 
-     ln -s \
-       $out/opt/brave.com/brave-origin/brave-origin \
-       $out/bin/brave-origin-stable
-
-    runHook postInstall
     mkdir -p $out/share/pixmaps
 
     cp \
-      opt/brave.com/brave-origin/product_logo_256.png \
-      $out/share/pixmaps/brave-origin.png
+      opt/brave.com/brave-origin-nightly/product_logo_256_nightly.png \
+      $out/share/pixmaps/brave-origin-nightly.png
+
+        runHook postInstall
   '';
 
   postInstall = ''
     for f in $out/share/applications/*.desktop; do
       substituteInPlace "$f" \
-        --replace-fail "/usr/bin/brave-origin-stable" "$out/bin/brave-origin"
+        --replace-fail "/usr/bin/brave-origin-nightly" \
+                       "$out/bin/brave-origin-nightly"
     done
   '';
 
   postFixup = ''
-    wrapProgram $out/bin/brave-origin \
+    wrapProgram $out/bin/brave-origin-nightly \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
   '';
 
   meta = with lib; {
-    description = "Brave Origin browser";
+    description = "Brave Origin Nightly Browser";
     homepage = "https://brave.com/origin/";
     license = licenses.unfree;
     platforms = platforms.linux;
-    mainProgram = "brave-origin";
+    mainProgram = "brave-origin-nightly";
 
     sourceProvenance = with sourceTypes; [
       binaryNativeCode
