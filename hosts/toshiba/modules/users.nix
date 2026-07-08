@@ -11,7 +11,7 @@
       "video"
       "docker"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   nix.settings.trusted-users = [

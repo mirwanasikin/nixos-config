@@ -2,6 +2,7 @@
 
 {
   # Programs
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
+  programs.zsh.enable = false;
   programs.nix-ld.enable = true;
 }

@@ -9,7 +9,7 @@
     ./modules/dotfiles.nix
     ./modules/gtk.nix
     ./modules/tmux.nix
-    ./modules/zsh.nix
+    ./modules/fish.nix
     ./modules/mimeapps.nix
     ./modules/formatter.nix
     ./modules/git.nix
