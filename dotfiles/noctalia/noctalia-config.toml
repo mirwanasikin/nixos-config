@@ -1,4 +1,5 @@
 [bar.default]
+border = "primary"
 center = [ "workspaces" ]
 end = [ "cpu", "ram", "notifications", "network", "bluetooth", "volume", "battery" ]
 font_weight = 700
@@ -12,6 +13,8 @@ start = [ "date", "clock", "media", "active_window" ]
 thickness = 30
 
 [dock]
+icon_size = 35
+main_axis_padding = 6
 shadow = false
 
 [idle]
@@ -137,20 +140,31 @@ telemetry_enabled = false
 builtin = "Catppuccin"
 community_palette = "Catppuccin Lavender"
 custom_palette = "Ayu"
+mode = "dark"
+source = "builtin"
 wallpaper_scheme = "ADW"
+
+    [theme.templates]
+    builtin_ids = [ "cava", "niri" ]
 
 [wallpaper]
 directory = "/home/irwan/.config/wallpaper"
 edge_smoothness = 0.0
+transition_on_startup = true
+
+    [wallpaper.automation]
+    interval_seconds = 1800
+    order = "random"
+    recursive = true
 
     [wallpaper.default]
-    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+    path = "/home/irwan/.config/wallpaper/anime-girl2.jpg"
 
     [wallpaper.last]
-    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+    path = "/home/irwan/.config/wallpaper/anime-girl2.jpg"
 
     [wallpaper.monitors.LVDS-1]
-    path = "/home/irwan/.config/wallpaper/samurai.jpg"
+    path = "/home/irwan/.config/wallpaper/anime-girl2.jpg"
 
 [widget.network]
 show_label = false

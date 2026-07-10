@@ -39,12 +39,12 @@ in
 
 stdenv.mkDerivation rec {
   pname = "brave-origin-nightly";
-  version = "1.94.40";
+  version = "1.94.83";
 
   src = fetchurl {
     url = "https://brave-browser-apt-nightly.s3.brave.com/pool/main/b/brave-origin-nightly/brave-origin-nightly_${version}_amd64.deb";
 
-    hash = "sha256-40ydFhbnjyGsGBducRnxK4XwrD4lYew7tkppalDo3QM=";
+    hash = "sha256-+Tdl+9+io/B4k/SfOsIrmzq9rPj8aBjOY5VcEzjNZOs=";
   };
 
   sourceRoot = ".";

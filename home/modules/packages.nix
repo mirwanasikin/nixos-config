@@ -42,6 +42,7 @@
     devenv
     kubectl
     kubeseal
+    android-tools
 
     # Shell utilities
     tldr

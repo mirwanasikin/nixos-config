@@ -30,7 +30,7 @@
     # terrafrom
     terraform-ls
     tflint
-    checkov
+    # checkov
     pre-commit
 
     # tofu

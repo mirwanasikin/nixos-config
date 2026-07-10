@@ -29,8 +29,6 @@
     # Container Tools
     podman
     podman-compose
-    buildah
-    skopeo
     docker
     docker-compose
 
@@ -40,6 +38,9 @@
     binutils
     smartmontools
     brightnessctl
+    gvfs
+    simple-mtpfs
+    android-file-transfer
 
     # Debug Forensics
     gcc

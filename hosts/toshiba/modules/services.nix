@@ -29,6 +29,9 @@
   # Battery
   services.upower.enable = true;
 
+  # Gvfs
+  services.gvfs.enable = true;
+
   # Ollama
   # services.ollama = {
   #  enable = true;

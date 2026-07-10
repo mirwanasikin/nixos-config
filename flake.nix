@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    # nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     catppuccin.url = "github:catppuccin/nix";
   };
