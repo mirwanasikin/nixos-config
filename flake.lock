@@ -89,11 +89,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784789275,
-        "narHash": "sha256-cgRTWuG+u1tBPhm01JrId2k0Bni09phVJ1Q0BZlRd7M=",
+        "lastModified": 1785239295,
+        "narHash": "sha256-aYFoftXjm7Df7CAoR0XoMQjJ9rTZ/l9d1jr9EqD7sHM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "3b0e6bbd65869af1beadf5963a99befc179d209f",
+        "rev": "42bb40f7aaab63a107b64a20c4a4ade6550758d0",
         "type": "github"
       },
       "original": {
@@ -133,16 +133,16 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1784555310,
-        "narHash": "sha256-/FCliTPgiuV1owejZFNx3Ch9irdvkOfOFl+HHZ+DrtM=",
+        "lastModified": 1785256323,
+        "narHash": "sha256-QWIyY38bjxVVit/cqD50Qfu7kCxUNLLPyu5iqll6AoE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "421eebfd0ec7bccd4abe826ce62d7e6e83129493",
+        "rev": "55a47467088f122a37ca223c1663c7ec4a74be60",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
+        "ref": "master",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -154,11 +154,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784768158,
-        "narHash": "sha256-GhrQw9jeHxNc8nWcfl37hg82Ta1acLwrJPksBi8xkrI=",
+        "lastModified": 1785254164,
+        "narHash": "sha256-oIMxQDz3pJ5/+56Vw4fRc2/OWqBpytU+T49HuEKSMH0=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "79530a6290fbf5ba5e34db61d4729abc7eea3920",
+        "rev": "cf55ac0d9ea1edeeb12b90bc51f2808ea5797af6",
         "type": "github"
       },
       "original": {
@@ -185,11 +185,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1784481035,
-        "narHash": "sha256-nC0QN+GPTnA5i+WBx8S2rG8+VFh+EeBnEe5mU3hlAcQ=",
+        "lastModified": 1785048222,
+        "narHash": "sha256-LjFVfwxensz76SjnvofF1Jsw+xTLd8Qp31W0J6nh2XI=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "a6baa7464f9b21a106dcfabb0bdcfe96fb434409",
+        "rev": "17e524f330c282d31c32dfe076222d4a12277886",
         "type": "github"
       },
       "original": {
