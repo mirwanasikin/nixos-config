@@ -62,9 +62,10 @@
 
     # Communications
     thunderbird
+    ferdium
 
-    # testing
-    (pkgs.callPackage ./brave-origin.nix { })
+    # Browser
+    brave-origin
   ];
 
 }
