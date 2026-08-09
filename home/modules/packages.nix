@@ -66,6 +66,9 @@
 
     # Browser
     brave-origin
+
+    # Office
+    onlyoffice-desktopeditors
   ];
 
 }

@@ -24,11 +24,11 @@
 
   swapDevices = [
     {
-      device = "/dev/disk/by-uuid/d6b673ef-8b59-42f5-8ea5-22a5098181d6";
+      device = "/dev/disk/by-label/swap";
     }
   ];
 
-  boot.resumeDevice = "/dev/disk/by-uuid/d6b673ef-8b59-42f5-8ea5-22a5098181d6";
+  boot.resumeDevice = "/dev/disk/by-label/swap";
 
   # GRUB
   boot.loader.grub = {

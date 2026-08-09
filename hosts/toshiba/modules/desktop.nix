@@ -37,6 +37,8 @@
     nerd-fonts.caskaydia-mono
     nerd-fonts.meslo-lg
     nerd-fonts.jetbrains-mono
+    corefonts
+    vista-fonts
   ];
 
   # Noctalia Cache
