@@ -36,7 +36,7 @@ Setup priorities:
 Here's the package or software I mainly use in my workflow
 | Category | Choice | Reason |
 | -------- | ------ | ------ |
-| `Kernel` | Kernel Linux LTS/Kernel CachyOS LTS | It's an old laptop so LTS kernel its more suitable |
+| `Kernel` | Kernel Linux LTS 5.15.y | It's an old laptop so LTS kernel its more suitable |
 | `DE/WM` | Niri + Noctalia Shell v5 | Niri is compatible with my workflow and also Noctalia shell v5 is simple |
 | `Display Manager` | sddm | I'm using Catppuccin theme and sddm is easy to customize |
 | `Terminal` | Foot | I can't use kitty, alacritty can't render picture or emoji |
@@ -47,6 +47,9 @@ Here's the package or software I mainly use in my workflow
 
 > [!NOTE]
 > Some packages are using community flakes so before you try to install it's better to check my [Flake](./flake.nix) first.
+
+> [!CAUTION]
+> In my Toshiba setup I'm using really old kernel which is 5.15 because I'm chasing the lightweight kernel. If you're running a new type of machine don't install the old kernel.
 
 ---
 

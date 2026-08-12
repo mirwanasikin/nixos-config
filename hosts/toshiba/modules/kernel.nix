@@ -6,9 +6,17 @@
 }:
 
 {
-  # NixOS Kernel
-  boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
+  # List NixOS Kernel
+  # Latest, Zen and RC
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_testing; # Kernel RC
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen; # Kernel zen
+
+  # Kernel LTS
+  # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.12
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
 
   # Kernel Compile
   # boot.kernelPackages = pkgs.linuxPackagesFor (
