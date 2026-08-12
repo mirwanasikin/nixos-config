@@ -15,8 +15,9 @@
   # Kernel LTS
   # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.12
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.1
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_10; # Kernel LTS 5.10
 
   # Kernel Compile
   # boot.kernelPackages = pkgs.linuxPackagesFor (

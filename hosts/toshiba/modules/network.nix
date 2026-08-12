@@ -7,6 +7,7 @@
   networking.hosts = {
     "127.0.0.1" = [ "myapp.com" ];
   };
+  networking.wireless.enableHardening = false; # To make the wifi works in kernel 5.10. Don't Follows, after the 5.10 EOL i will removed this config
 
   # DNS Over TLS
   services.resolved = {

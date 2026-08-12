@@ -12,7 +12,7 @@
 ---
 
 > [!CAUTION]
-> This configuration is using NixOS nixpkgs master branch so there is the risk of not having binary cache inside. I still not sure is it work on your machine or not but I can make sure it will make your machine compile sometimes so if you don't want to compile it's better to use unstable or stable channel
+> This configuration is using NixOS nixpkgs master branch so there is the risk of not having binary cache inside. I still not sure is it work on your machine or not but I can make sure it will make your machine compile sometimes so if you don't want to compile it's better to use unstable or stable channel. Also in my Toshiba setup I'm using really old kernel which is 5.10 because I'm chasing the lightweight kernel. If you're running a new type of machine don't install the old kernel also I was disabling wireless hardening so pay attention to that config, if it breaks you don't blame me.
 
 > [!IMPORTANT]
 > This configuration is using agenix and heavy on my workflow so don't blindly copy my configuration, use it as a reference, not a universal solution. Inside is mostly are CLI tools.
@@ -36,7 +36,7 @@ Setup priorities:
 Here's the package or software I mainly use in my workflow
 | Category | Choice | Reason |
 | -------- | ------ | ------ |
-| `Kernel` | Kernel Linux LTS 5.15.y | It's an old laptop so LTS kernel its more suitable |
+| `Kernel` | Kernel Linux LTS 5.10.y | It's an old laptop so LTS kernel its more suitable |
 | `DE/WM` | Niri + Noctalia Shell v5 | Niri is compatible with my workflow and also Noctalia shell v5 is simple |
 | `Display Manager` | sddm | I'm using Catppuccin theme and sddm is easy to customize |
 | `Terminal` | Foot | I can't use kitty, alacritty can't render picture or emoji |
@@ -47,9 +47,6 @@ Here's the package or software I mainly use in my workflow
 
 > [!NOTE]
 > Some packages are using community flakes so before you try to install it's better to check my [Flake](./flake.nix) first.
-
-> [!CAUTION]
-> In my Toshiba setup I'm using really old kernel which is 5.15 because I'm chasing the lightweight kernel. If you're running a new type of machine don't install the old kernel.
 
 ---
 
