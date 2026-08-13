@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   config,
+  lib,
   ...
 }:
 
@@ -19,7 +20,7 @@
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_10; # Kernel LTS 5.10
 
-  # Kernel Compile
+  # Kernel Compile straight from torvalds
   # boot.kernelPackages = pkgs.linuxPackagesFor (
   #   pkgs.buildLinux {
   #     version = "7.2-rc2";
@@ -33,6 +34,21 @@
   #     configfile = config.boot.kernelPackages.kernel.configfile;
   #     allowImportFromDerivation = true;
   #     ignoreConfigErrors = true;
+  #     kernelPatches = [ ];
+  #   }
+  # );
+
+  # Kernel Compile manual
+  # boot.kernelPackages = pkgs.linuxPackagesFor (
+  #   pkgs.buildLinux {
+  #     version = "6.12.103";
+  #     modDirVersion = "6.12.103";
+
+  #     src = /home/irwan/linux-stable;
+  #     configfile = ./kernel-config/config-6.12;
+
+  #     allowImportFromDerivation = true;
+  #     ignoreConfigErrors = false;
   #     kernelPatches = [ ];
   #   }
   # );
