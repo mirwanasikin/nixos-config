@@ -50,6 +50,9 @@
     strace
     lsof
 
+    # Code
+    python3
+
     # Cert
     mkcert
     nssTools
