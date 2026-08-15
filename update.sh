@@ -8,6 +8,10 @@ FLAKE_TARGET="${FLAKE_DIR}#${HOSTNAME}"
 
 nix flake update --flake "$FLAKE_DIR"
 
+echo "Simpan commit terlebih dahulu"
+git add .
+git commit -m "update tanggal $(date)"
+
 echo "Dry Build"
 nixos-rebuild dry-build --flake "$FLAKE_TARGET" 2>&1 | tee /tmp/nixos-dry-build.log
 
@@ -19,10 +23,6 @@ if [[ "$answer" != "y" ]]; then
   echo "Oke dibatalkan"
   exit 1
 fi
-
-echo "Simpan commit terlebih dahulu"
-git add ../.
-git commit -m "update tanggal $(date)"
 
 echo "Catat Generasi sekarang"
 OLD_GEN=$(nixos-rebuild list-generations --flake "$FLAKE_TARGET" | awk '$NF=="True" {print $1}')
