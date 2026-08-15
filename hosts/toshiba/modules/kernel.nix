@@ -17,8 +17,9 @@
   # boot.kernelPackages = pkgs.linuxPackages; # Kernel LTS
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_xanmod; # Kernel xanmod
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_6; # Kernel LTS 6.6
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.1
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
 
   # Kernel Compile straight from torvalds
   # boot.kernelPackages = pkgs.linuxPackagesFor (
