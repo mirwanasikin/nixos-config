@@ -12,7 +12,6 @@
     # Network tools
     wget
     curl
-    git
     dig
     iperf
     nmap
@@ -40,7 +39,6 @@
     brightnessctl
     gvfs
     simple-mtpfs
-    android-file-transfer
 
     # Debug Forensics
     gcc
@@ -52,6 +50,7 @@
 
     # Code
     python3
+    clang
 
     # Cert
     mkcert

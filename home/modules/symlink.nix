@@ -10,6 +10,7 @@ let
     niri = "niri";
     noctalia = "noctalia";
     fastfetch = "fastfetch";
+    yazi = "yazi";
   };
 
 in

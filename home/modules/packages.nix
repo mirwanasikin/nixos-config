@@ -9,19 +9,13 @@
     ripgrep
     glow
     hyperfine
-    delta
-    watchexec
     ouch
-    unrar
-    unzip
-    zip
+    watchexec
 
     # System monitoring
     htop
     duf
     ncdu
-    dust
-    speedtest-cli
     nix-output-monitor
     nvd
     nh
@@ -37,7 +31,6 @@
     awscli2
     ssm-session-manager-plugin
     ansible
-    terraform
     opentofu
     devenv
     kubectl
@@ -59,16 +52,12 @@
     playerctl
     zathura
     gowall
-
-    # Communications
-    thunderbird
-    ferdium
+    spotatui
+    yt-dlp
 
     # Browser
     brave-origin
-
-    # Office
-    onlyoffice-desktopeditors
+    w3m
   ];
 
 }
