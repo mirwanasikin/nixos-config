@@ -41,7 +41,6 @@
     simple-mtpfs
 
     # Debug Forensics
-    gcc
     file
     binwalk
     gdb
@@ -49,6 +48,9 @@
     lsof
 
     # Code
+    gcc
+    gnumake
+    gdb
     python3
     clang
 
