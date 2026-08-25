@@ -6,7 +6,6 @@ let
 
   configs = {
     nvim = "nvim";
-    wallpaper = "wallpaper";
     niri = "niri";
     noctalia = "noctalia";
     fastfetch = "fastfetch";
@@ -24,4 +23,9 @@ in
     // {
       "starship.toml".source = create_symlink "${dotfiles}/starship.toml";
     };
+
+  home.file."Pictures/Wallpaper" = {
+    source = create_symlink "${dotfiles}/wallpaper";
+    recursive = true;
+  };
 }
