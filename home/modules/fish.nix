@@ -83,6 +83,7 @@ in
       pair_device = "kdeconnect-cli --pair --device ${kdeConnectDeviceId}";
       unpair_device = "kdeconnect-cli --unpair --device ${kdeConnectDeviceId}";
       list_device = "kdeconnect-cli --list-devices";
+      spt = "spotatui";
 
       # Complex
       vif = "fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always {}' | xargs nvim";
