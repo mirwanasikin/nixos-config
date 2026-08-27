@@ -12,54 +12,64 @@
 ---
 
 > [!CAUTION]
-> This configuration is using NixOS nixpkgs master branch so there is the risk of not having binary cache inside. I still not sure is it work on your machine or not but I can make sure it will make your machine compile sometimes so if you don't want to compile it's better to use unstable or stable channel. Also in my Toshiba setup I'm using really old kernel which is 5.10 because I'm chasing the lightweight kernel. If you're running a new type of machine don't install the old kernel also I was disabling wireless hardening so pay attention to that config, if it breaks you don't blame me.
+> **Real talk:** This runs on nixpkgs master. No binary cache guarantee. Your machine _will_ compile things. A lot. If you'd rather not watch GCC spin for hours, stick to unstable or stable channels.
+>
+> Also — I'm daily-driving a 2010 Toshiba with kernel 6.18 (lightweight FTW) and wireless hardening disabled. If you're on modern hardware, don't copy that blindly. If it breaks, you keep both pieces.
 
 > [!IMPORTANT]
-> This configuration is using agenix and heavy on my workflow so don't blindly copy my configuration, use it as a reference, not a universal solution. Inside is mostly are CLI tools.
+> Heavy on agenix + my specific workflow. This isn't a drop-in solution — use it as a reference, not a template. Mostly CLI tools inside because that's how I roll.
 
 ---
 
-## 🧠 Philosophy
+## 🧠 The Vibe
 
-Setup priorities:
+**Simplicity** — Less config, less problems. I'd rather maintain 50 lines than 5000.
 
-- **Simplicity** - Less is more
-- **Reproducibility** - Flake based _sound's cool but it's just the answer of my laziness to setup my new machine so I choose to keep it easier_
-- **Keyboard Driven** - I'm typing with my 10 finger so it's suitable for me
-- **Terminal Centric** - Easy typing with 10 finger and then terminal is all in one tool
-- **Low Resource Usage** - I'm using 2010 Laptop BTW.
+**Reproducibility** — Flakes sound fancy but honestly? They just save me from reconfiguring a new machine for the third time. Laziness-driven development.
+
+**Keyboard-driven** — 10 fingers, zero mouse. If I can't navigate it with keys, I don't want it.
+
+**Terminal-centric** — One tool to rule them all. TMUX sessions > GUI windows.
+
+**Low resource usage** — Did I mention the 2010 laptop? Every MB counts.
 
 ---
 
-## 📦 Package I'm Using
+## 📦 Daily Drivers
 
-Here's the package or software I mainly use in my workflow
-| Category | Choice | Reason |
-| -------- | ------ | ------ |
-| `Kernel` | Kernel Linux LTS 5.10.y | It's an old laptop so LTS kernel its more suitable |
-| `DE/WM` | Niri + Noctalia Shell v5 | Niri is compatible with my workflow and also Noctalia shell v5 is simple |
-| `Display Manager` | sddm | I'm using Catppuccin theme and sddm is easy to customize |
-| `Terminal` | Foot | I can't use kitty, alacritty can't render picture or emoji |
-| `Browser` | Brave Origin| It's still experimental, maybe I'll make the flake soon or not |
-| `Media` | Spotify | Well it's kinda easier and legal |
-| `Text Editor` | Neovim | Well its lovable for 10 typing finger enjoyer |
-| `Note Taking` | Obsidian | It's doing well since I'm used to markdown format |
+| Category          | Choice                   | Why Though                                                                          |
+| ----------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| `Kernel`          | Linux LTS 6.18.y         | Modern LTS, still runs fine on the 2010 tank.                                       |
+| `WM/Shell`        | Niri + Noctalia Shell v5 | Niri's scrolling workflow clicks with my brain. Noctalia stays out of the way.      |
+| `Display Manager` | SDDM                     | Catppuccin theme + easy theming = happy me.                                         |
+| `Terminal`        | Foot                     | Kitty/Alacritty couldn't render images/emoji properly on my setup. Foot just works. |
+| `Browser`         | Brave Origin             | Experimental fork. Might flake-ify it. Might not.                                   |
+| `Media`           | Spotify                  | It's legal, it works, I'm not fighting it.                                          |
+| `Editor`          | Neovim                   | 10-finger typing + modal editing = flow state.                                      |
+| `Notes`           | Obsidian                 | Markdown-native, links work, graph view is oddly satisfying.                        |
 
 > [!NOTE]
-> Some packages are using community flakes so before you try to install it's better to check my [Flake](./flake.nix) first.
+> Some packages pull from community flakes. Peek at [flake.nix](./flake.nix) before adopting anything.
 
 ---
 
-## ⚙️ Tools I use
+## ⚙️ Dev/Infra Toolbox
 
-Okay let's get a little bit serious, so of course I'm using some tools for development or DevOps and here's my tools i mainly use
-
-- **Terraform/OpenTofu** - Right now I'm mostly use OpenTofu due to license and it's open source
-- **Ansbile** - For configuration management in Cloud Service
-- **AWS CLI** - AWS workflow like searching for AMI or looking which instance alive
-- **Kubectl** - For kubernetes setup
-- **Docker/Podman** - Container testing
+- **OpenTofu** — Terraform's open-source fork. License drama dodged.
+- **Ansible** — Config management for cloud stuff. Boring but reliable.
+- **AWS CLI** — Hunting AMIs, checking instance health, the usual.
+- **kubectl** — Kubernetes when I have to.
+- **Docker/Podman** — Container testing. Podman for rootless, Docker when I'm lazy.
 
 ---
 
-If you ever interested with my setup you can copy a little bit and change the config like you want. Feel free to be references. peace.
+## 🤝 Wanna Borrow Bits?
+
+Go for it. Cherry-pick what works, rewrite what doesn't. This config exists because I stood on shoulders — pay it forward.
+
+Questions? Open an issue. Or don't. It's your machine.
+
+---
+
+_Built with ❄️ and excessive recompilation_
+

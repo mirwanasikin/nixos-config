@@ -53,6 +53,8 @@
     gdb
     python3
     clang
+    rustc
+    zig
 
     # Cert
     mkcert

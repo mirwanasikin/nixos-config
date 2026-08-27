@@ -46,8 +46,10 @@
     cppcheck
     bear
 
-    # Typst
-    typst
-    tinymist
+    # Rust
+    rustfmt
+    cargo
+    rust-analyzer
+    clippy
   ];
 }

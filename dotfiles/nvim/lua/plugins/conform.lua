@@ -8,6 +8,7 @@ return {
       dockerfile = {},
       python = { "ruff_format" },
       c = { "clang_format" },
+      rust = { "rustfmt" },
     },
   },
 }

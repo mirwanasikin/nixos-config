@@ -11,6 +11,9 @@ return {
       terraformls = { mason = false },
       tofuls = { mason = false },
       tinymst = { mason = false },
+      rustfmt = { mason = false },
+      ["rust-analyzer"] = { mason = false },
+      cippy = { mason = false },
     },
   },
 }

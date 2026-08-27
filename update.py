@@ -43,7 +43,7 @@ def main():
     old_gen = get_current_generation(FLAKE_TARGET)
 
     print("Memulai Update")
-    run(["sudo", "nixos-rebuild", "switch", "--flake", FLAKE_TARGET])
+    run(["time", "sudo", "nixos-rebuild", "switch", "--flake", FLAKE_TARGET])
 
     print("Catat Generasi Sekarang")
     new_gen = get_current_generation(FLAKE_TARGET)

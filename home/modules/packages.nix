@@ -10,6 +10,7 @@
     glow
     hyperfine
     ouch
+    unrar
     watchexec
 
     # System monitoring
@@ -54,10 +55,16 @@
     gowall
     spotatui
     yt-dlp
+    chafa
+    gophertube
 
     # Browser
     brave-origin
     w3m
+    aerc
+
+    # testing
+    opencode
   ];
 
 }
