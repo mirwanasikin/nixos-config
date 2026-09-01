@@ -24,6 +24,12 @@
     # nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     catppuccin.url = "github:catppuccin/nix";
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -58,6 +64,9 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs agenix; };
         modules = [
+          {
+            nixpkgs.overlays = [ inputs.nur.overlays.default ];
+          }
           ./hosts/toshiba/configuration.nix
           home-manager.nixosModules.home-manager
           agenix.nixosModules.default

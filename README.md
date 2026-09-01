@@ -43,7 +43,7 @@
 | `WM/Shell`        | Niri + Noctalia Shell v5 | Niri's scrolling workflow clicks with my brain. Noctalia stays out of the way.      |
 | `Display Manager` | SDDM                     | Catppuccin theme + easy theming = happy me.                                         |
 | `Terminal`        | Foot                     | Kitty/Alacritty couldn't render images/emoji properly on my setup. Foot just works. |
-| `Browser`         | Brave Origin             | Experimental fork. Might flake-ify it. Might not.                                   |
+| `Browser`         | Firefox                  | Simple and can be set with nixos config                                             |
 | `Media`           | Spotify                  | It's legal, it works, I'm not fighting it.                                          |
 | `Editor`          | Neovim                   | 10-finger typing + modal editing = flow state.                                      |
 | `Notes`           | Obsidian                 | Markdown-native, links work, graph view is oddly satisfying.                        |
@@ -72,4 +72,3 @@ Questions? Open an issue. Or don't. It's your machine.
 ---
 
 _Built with ❄️ and excessive recompilation_
-

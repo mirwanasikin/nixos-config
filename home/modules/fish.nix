@@ -85,6 +85,9 @@ in
       list_device = "kdeconnect-cli --list-devices";
       spt = "spotatui";
 
+      # Web
+      web = "~/.local/bin/web";
+
       # Complex
       vif = "fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always {}' | xargs nvim";
     };

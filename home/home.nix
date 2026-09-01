@@ -4,6 +4,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./modules/foot.nix
+    ./modules/firefox.nix
     ./modules/spicetify.nix
     ./modules/packages.nix
     ./modules/dotfiles.nix

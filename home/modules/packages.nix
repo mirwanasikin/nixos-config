@@ -59,7 +59,6 @@
     gophertube
 
     # Browser
-    brave-origin
     w3m
     aerc
 
