@@ -145,8 +145,7 @@
           # Required by the catppuccin module to apply the theme (Firefox Color)
           firefox-color
           multi-account-containers
-          youtube-recommended-videos
-          sponsorblock
+          catppuccin-web-file-icons
         ];
       };
     };
