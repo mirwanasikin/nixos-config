@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia-v5 = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     agenix.url = "github:ryantm/agenix";
 
     spicetify-nix = {
@@ -40,7 +35,6 @@
       home-manager,
       agenix,
       catppuccin,
-      noctalia-v5,
       lazyvim,
       ...
     }@inputs:
@@ -56,7 +50,6 @@
               lazyvim.homeManagerModules.default
               ./home/home.nix
               inputs.catppuccin.homeModules.catppuccin
-              inputs.noctalia-v5.homeModules.default
             ];
           };
         };

@@ -6,7 +6,6 @@ let
 
   configs = {
     niri = "niri";
-    noctalia = "noctalia";
     fastfetch = "fastfetch";
     yazi = "yazi";
   };

@@ -19,8 +19,6 @@
 
     # Niri
     niri
-    # noctalia-shell
-    (inputs.noctalia-v5.packages.${pkgs.system}.default)
     xwayland-satellite
     wayland-utils
     libnotify

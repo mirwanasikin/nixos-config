@@ -19,6 +19,7 @@
     ./modules/wf-recorder.nix
     ./modules/symlink.nix
     ./modules/lazyvim.nix
+    ./modules/noctalia.nix
   ];
 
   home = {
