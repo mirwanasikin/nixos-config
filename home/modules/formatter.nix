@@ -1,40 +1,26 @@
 { pkgs, ... }:
 
 {
-  # Formatter I Need
   home.packages = with pkgs; [
+    # Nix
+    nil
+    nixfmt
+    statix
+
     # Shell
     shfmt
     shellcheck
 
-    # Nix
-    nil
-    nixfmt
-
-    # Python
-    pyright
-    ruff
-
-    # yaml / config
-    yaml-language-server
-    prettier
-
     # Docker
-    dockerfile-language-server
-    docker-compose-language-service
     hadolint
 
     # Ansible
     ansible-lint
 
-    # terrafrom
-    terraform-ls
+    # Terraform/Tofu
     tflint
-    # checkov
     pre-commit
-
-    # tofu
-    tofu-ls
+    # checkov
 
     # Markdown
     markdownlint-cli2
@@ -42,14 +28,10 @@
     pandoc
 
     # C
-    clang-tools
     cppcheck
     bear
 
     # Rust
-    rustfmt
     cargo
-    rust-analyzer
-    clippy
   ];
 }

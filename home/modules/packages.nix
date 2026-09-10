@@ -23,7 +23,6 @@
 
     # Dev tools
     gh
-    neovim
     k9s
     terragrunt
     kubernetes-helm

@@ -30,6 +30,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lazyvim.url = "github:pfassina/lazyvim-nix";
   };
 
   outputs =
@@ -40,6 +41,7 @@
       agenix,
       catppuccin,
       noctalia-v5,
+      lazyvim,
       ...
     }@inputs:
     let
@@ -51,6 +53,7 @@
           extraSpecialArgs = { inherit inputs agenix; };
           users.irwan = {
             imports = [
+              lazyvim.homeManagerModules.default
               ./home/home.nix
               inputs.catppuccin.homeModules.catppuccin
               inputs.noctalia-v5.homeModules.default

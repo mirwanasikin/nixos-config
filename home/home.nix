@@ -18,11 +18,14 @@
     ./modules/services.nix
     ./modules/wf-recorder.nix
     ./modules/symlink.nix
+    ./modules/lazyvim.nix
   ];
 
-  home.username = "irwan";
-  home.homeDirectory = "/home/irwan";
-  home.stateVersion = "25.11";
+  home = {
+    username = "irwan";
+    homeDirectory = "/home/irwan";
+    stateVersion = "26.11";
+  };
 
   programs.home-manager.enable = true;
 }
