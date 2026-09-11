@@ -14,13 +14,10 @@ in
 
 {
   xdg.configFile =
-    (builtins.mapAttrs (name: subpath: {
+    builtins.mapAttrs (name: subpath: {
       source = create_symlink "${dotfiles}/${subpath}";
       recursive = true;
-    }) configs)
-    // {
-      "starship.toml".source = create_symlink "${dotfiles}/starship.toml";
-    };
+    }) configs;
 
   home.file."Pictures/Wallpaper" = {
     source = create_symlink "${dotfiles}/wallpaper";
