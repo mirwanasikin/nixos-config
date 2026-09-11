@@ -33,11 +33,6 @@ in
     enableZshIntegration = true;
   };
 
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   programs.zsh = {
     enable = true;
 

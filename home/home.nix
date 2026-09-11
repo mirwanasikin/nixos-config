@@ -11,6 +11,7 @@
     ./modules/gtk.nix
     ./modules/tmux.nix
     ./modules/fish.nix
+    ./modules/starship.nix
     ./modules/mimeapps.nix
     ./modules/formatter.nix
     ./modules/git.nix
