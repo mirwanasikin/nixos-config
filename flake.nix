@@ -16,6 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri.url = "github:epireyn/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs";
+
     # nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     catppuccin.url = "github:catppuccin/nix";
@@ -36,6 +39,7 @@
       agenix,
       catppuccin,
       lazyvim,
+      niri,
       ...
     }@inputs:
     let
@@ -50,6 +54,7 @@
               lazyvim.homeManagerModules.default
               ./home/home.nix
               inputs.catppuccin.homeModules.catppuccin
+              niri.homeModules.config
             ];
           };
         };

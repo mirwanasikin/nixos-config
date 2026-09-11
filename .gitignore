@@ -18,3 +18,9 @@ credentials
 !secrets/*.age
 !secrets/secrets.nix
 .aider*
+
+# Graphify
+graphify-out/cache/
+graphify-out/graph.json
+graphify-out/cost.json
+graphify-out/manifest.json

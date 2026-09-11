@@ -39,7 +39,6 @@
 
     # Shell utilities
     tldr
-    fastfetch
     figlet
     bluetui
 
@@ -63,6 +62,7 @@
 
     # Vibe Coding
     opencode
+    graphify
   ];
 
 }

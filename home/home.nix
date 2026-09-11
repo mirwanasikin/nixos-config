@@ -8,6 +8,7 @@
     ./modules/spicetify.nix
     ./modules/packages.nix
     ./modules/dotfiles.nix
+    ./modules/fastfetch.nix
     ./modules/gtk.nix
     ./modules/tmux.nix
     ./modules/fish.nix
@@ -18,9 +19,9 @@
     ./modules/ssh.nix
     ./modules/services.nix
     ./modules/wf-recorder.nix
-    ./modules/symlink.nix
     ./modules/lazyvim.nix
     ./modules/noctalia.nix
+    ./modules/niri.nix
   ];
 
   home = {

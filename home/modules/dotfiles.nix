@@ -9,7 +9,6 @@
     accent = "mauve";
     starship.enable = false;
     gtk.icon.enable = false;
-    yazi.enable = false;
   };
 
   programs = {
