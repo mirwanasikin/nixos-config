@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
 {
   imports = [
@@ -27,6 +27,11 @@
     username = "irwan";
     homeDirectory = "/home/irwan";
     stateVersion = "26.11";
+
+    file."Pictures/Wallpaper" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/wallpaper";
+      recursive = true;
+    };
   };
 
   programs.home-manager.enable = true;

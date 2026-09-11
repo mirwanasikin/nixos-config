@@ -1,14 +1,18 @@
 { ... }:
 
 {
-  # Hostname & Network Manager
-  networking.hostName = "toshiba";
-  networking.networkmanager.enable = true;
-  networking.hosts = {
-    "127.0.0.1" = [ "myapp.com" ];
+  # Networking
+  networking = {
+    hostName = "toshiba";
+    networkmanager.enable = true;
+
+    firewall = {
+      enable = true;
+      trustedInterfaces = [ "tailscale0" ];
+    };
   };
 
-  # DNS Over TLS
+  # DNS
   services.resolved = {
     enable = true;
     settings = {
@@ -21,11 +25,5 @@
         Domains = "~.";
       };
     };
-  };
-
-  # Firewall & KDE Connect
-  networking.firewall = {
-    enable = true;
-    trustedInterfaces = [ "tailscale0" ];
   };
 }

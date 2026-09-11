@@ -1,7 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
   ...
 }:
 
@@ -10,26 +7,29 @@ let
 in
 
 {
-  programs.atuin = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+  programs = {
+    # Atuin
+    atuin = {
+      enable = true;
+      enableFishIntegration = true;
+    };
 
-  programs.fzf = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+    # fzf
+    fzf = {
+      enable = true;
+      enableFishIntegration = true;
+      historyWidget = {
+        fish = {
+          command = "";
+        };
+      };
+    };
 
-  programs.fzf.historyWidget.fish.command = "";
-
-  catppuccin.fzf = {
-    enable = true;
-    flavor = "mocha";
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
+    # Zoxide
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 
   programs.fish = {

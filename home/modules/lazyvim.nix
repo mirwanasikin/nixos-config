@@ -46,10 +46,9 @@
       util.chezmoi.enable = true;
     };
 
-    # LSP servers/tools yang tidak punya LazyVim extra
     extraPackages = with pkgs; [
-      tofu-ls # untuk tofuls
-      clang-tools # untuk clang-tidy
+      tofu-ls
+      clang-tools
     ];
 
     config = {
@@ -102,6 +101,8 @@
             lazy = false,
             name = "catppuccin",
             priority = 1000,
+            -- pakai copy Nix (bootstrap home-manager) supaya tidak git-clone & tidak dobel sumber
+            dir = vim.fn.stdpath("data") .. "/site/pack/hm/start/catppuccin-nvim",
             opts = {
               flavour = "mocha",
               transparent_background = true,

@@ -1,24 +1,30 @@
 { ... }:
 
 {
-  services.udiskie = {
-    enable = true;
-    automount = true;
-    tray = "never";
-  };
+  services = {
+    # Udiskie for Automount USB
+    udiskie = {
+      enable = true;
+      automount = true;
+      tray = "never";
+    };
 
-  services.syncthing = {
-    enable = true;
-  };
+    # For Synchronize
+    syncthing = {
+      enable = true;
+    };
 
-  services.spotifyd = {
-    enable = true;
-    settings = {
-      global = {
-        device_name = "spotatui-headless";
-        bitrate = 320;
-        backend = "pulseaudio";
+    # Spotatui Background
+    spotifyd = {
+      enable = true;
+      settings = {
+        global = {
+          device_name = "spotatui-headless";
+          bitrate = 320;
+          backend = "pulseaudio";
+        };
       };
     };
+
   };
 }

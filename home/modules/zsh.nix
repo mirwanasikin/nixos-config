@@ -11,26 +11,29 @@ let
 in
 
 {
-  programs.atuin = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs = {
+    # Atuin
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+    # fzf
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+      historyWidget = {
+        fish = {
+          command = "";
+        };
+      };
+    };
 
-  programs.fzf.historyWidget.zsh.command = "";
-
-  catppuccin.fzf = {
-    enable = true;
-    flavor = "mocha";
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
+    # Zoxide
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 
   programs.zsh = {

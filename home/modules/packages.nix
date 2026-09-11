@@ -61,7 +61,7 @@
     w3m
     aerc
 
-    # testing
+    # Vibe Coding
     opencode
   ];
 

@@ -2,35 +2,42 @@
 
 {
   # Services
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
+  services = {
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+
+    libinput.enable = true;
+
+    # Udisks
+    udisks2.enable = true;
+
+    # Dbus
+    dbus.enable = true;
+
+    openssh.enable = false;
+
+    # K3s
+    k3s = {
+      enable = false;
+      role = "server";
+    };
+
+    # Tailscale
+    tailscale.enable = true;
+
+    gitlab-runner = {
+      enable = true;
+      configFile = "/etc/gitlab-runner/config.toml";
+    };
+
+    # Battery
+    upower.enable = true;
+
+    # GVFS
+    gvfs.enable = true;
   };
-  services.libinput.enable = true;
-  services.udisks2.enable = true;
-  services.dbus.enable = true;
-  services.openssh.enable = false;
-
-  # k3s
-  services.k3s = {
-    enable = false;
-    role = "server";
-  };
-
-  # TailScale
-  services.tailscale.enable = true;
-
-  # Gitlab Runner
-  services.gitlab-runner = {
-    enable = true;
-    configFile = "/etc/gitlab-runner/config.toml";
-  };
-
-  # Battery
-  services.upower.enable = true;
-
-  # Gvfs
-  services.gvfs.enable = true;
 
   # Ollama
   # services.ollama = {
