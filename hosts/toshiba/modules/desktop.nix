@@ -6,12 +6,19 @@
   programs.xwayland.enable = true;
   services.displayManager.defaultSession = "niri";
 
-  # SDDm
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "catppuccin-mocha-mauve";
+  # noctalia-greeter
+  services.displayManager.noctalia-greeter = {
+    enable = true;
+    settings = {
+      cursor.size = 24;
+      keyboard.layout = "us";
+      appearance = {
+        scheme = "Catppuccin";
+      };
+    };
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
     };
   };
 
