@@ -4,9 +4,9 @@
   virtualisation.oci-containers = {
     backend = "docker";
 
-    containers.9router = {
-      image = "decolua/9router:0.5.40"; 
-      autoStart = true; 
+    containers."9router" = {
+      image = "decolua/9router:0.5.75";
+      autoStart = true;
 
       ports = [
         "127.0.0.1:20128:20128"
@@ -18,7 +18,6 @@
 
       environment = {
         DATA_DIR = "/app/data";
-        
       };
 
       extraOptions = [
