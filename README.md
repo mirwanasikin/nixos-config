@@ -1,10 +1,11 @@
-<h1 align=center>NixOS Personal Config ❄️</h1>
+<h1 align="center">❄️ Irwan's NixOS Config</h1>
 
-<div align=center>
+<div align="center">
+
+> *"I'm too lazy to remember what I installed or configured, so I declared everything."*
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/mirwanasikin/nixos-config?display_timestamp=author&style=for-the-badge&labelColor=black&color=%2394e2d5)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mirwanasikin/nixos-config?style=for-the-badge&labelColor=black&color=%23cba6f7)
-
 ![GitHub License](https://img.shields.io/github/license/mirwanasikin/nixos-config?style=for-the-badge&labelColor=black&color=%23a6e3a1)
 
 </div>
@@ -12,63 +13,122 @@
 ---
 
 > [!CAUTION]
-> **Real talk:** This runs on nixpkgs master. No binary cache guarantee. Your machine _will_ compile things. A lot. If you'd rather not watch GCC spin for hours, stick to unstable or stable channels.
+> **Living on the Edge (Literally):** This configuration tracks **`nixpkgs/master`**.
 >
-> Also — I'm daily-driving a 2010 Toshiba with kernel 6.18 (lightweight FTW) and wireless hardening disabled. If you're on modern hardware, don't copy that blindly. If it breaks, you keep both pieces.
+> - **Zero binary cache guarantees:** You *will* hear the CPU fan scream as it compiles packages from source.
+> - **Things break:** master moves fast and breaks things faster.
+> - If you want peace of mind or value your battery life, stick to `nixos-unstable` or the official stable channels.
 
 > [!IMPORTANT]
-> Heavy on agenix + my specific workflow. This isn't a drop-in solution — use it as a reference, not a template. Mostly CLI tools inside because that's how I roll.
+> **Secrets Management:** Secrets are strictly encrypted using **[agenix](https://github.com/ryantm/agenix)** (`secrets/*.age`).
+>
+> - Decryption requires matching private SSH keys configured for this specific host.
+> - This repository is my personal blueprint and reference, **not** a turnkey, plug-and-play distro installer.
 
 ---
 
-## 🧠 The Vibe
+## 🧠 The Philosophy
 
-**Simplicity** — Less config, less problems. I'd rather maintain 50 lines than 5000.
+### 1. Declarative Because I'm Lazy
 
-**Reproducibility** — Flakes sound fancy but honestly? They just save me from reconfiguring a new machine for the third time. Laziness-driven development.
+I don't use NixOS to look smart. I use NixOS because I have terrible memory—or more accurately, I am simply too lazy to remember:
 
-**Keyboard-driven** — 10 fingers, zero mouse. If I can't navigate it with keys, I don't want it.
+- What package did I install four months ago to convert an audio file?
+- Which random config file in `/etc` did I tweak at 2 AM?
+- What environment variables made that one tool work?
 
-**Terminal-centric** — One tool to rule them all. TMUX sessions > GUI windows.
+With NixOS, if an app or tweak isn't written down in this repository, **it does not exist**. One rebuild reproduces my entire digital brain.
 
-**Low resource usage** — Did I mention the 2010 laptop? Every MB counts.
+### 2. CLI-First & The Touch Typist Tax
 
----
+I am a touch typist. Reaching for the mouse feels like a penalty—it interrupts thought and breaks the rhythm of typing.
 
-## 📦 Daily Drivers
+Terminal applications and TUIs are fast, predictable, keyboard-driven, and consume virtually zero system resources. For that reason, 95% of my computing happens inside Foot, Tmux, and Neovim.
 
-| Category          | Choice                   | Why Though                                                                          |
-| ----------------- | ------------------------ | ----------------------------------------------------------------------------------- |
-| `Kernel`          | Linux LTS 6.18.y         | Modern LTS, still runs fine on the 2010 tank.                                       |
-| `WM/Shell`        | Niri + Noctalia Shell v5 | Niri's scrolling workflow clicks with my brain. Noctalia stays out of the way.      |
-| `Display Manager` | SDDM                     | Catppuccin theme + easy theming = happy me.                                         |
-| `Terminal`        | Foot                     | Kitty/Alacritty couldn't render images/emoji properly on my setup. Foot just works. |
-| `Browser`         | Firefox                  | Simple and can be set with nixos config                                             |
-| `Media`           | Spotify                  | It's legal, it works, I'm not fighting it.                                          |
-| `Editor`          | Neovim                   | 10-finger typing + modal editing = flow state.                                      |
-| `Notes`           | Obsidian                 | Markdown-native, links work, graph view is oddly satisfying.                        |
-
-> [!NOTE]
-> Some packages pull from community flakes. Peek at [flake.nix](./flake.nix) before adopting anything.
+What about GUI apps? A select few survive (like a web browser, because browsing modern web in w3m is an act of pure masochism). For the handful of GUI applications that made the cut: **feel free to snoop around the config files (`home/modules/`) to see what survived.**
 
 ---
 
-## ⚙️ Dev/Infra Toolbox
+## 💻 The Machine
 
-- **OpenTofu** — Terraform's open-source fork. License drama dodged.
-- **Ansible** — Config management for cloud stuff. Boring but reliable.
-- **AWS CLI** — Hunting AMIs, checking instance health, the usual.
-- **kubectl** — Kubernetes when I have to.
-- **Docker/Podman** — Container testing. Podman for rootless, Docker when I'm lazy.
+**Toshiba Satellite A665** — a 2010-era laptop that refuses to die.
 
----
+| Component | Spec |
+| :---------- | :----- |
+| **CPU** | Intel Core i3 M 380 @ 2.53GHz (2C/4T) |
+| **RAM** | 8GB DDR3 |
+| **Storage** | SSD SATA III 512GB, LUKS-encrypted ext4 root + swap |
+| **Age** | 16 years old and counting |
+| **Status** | Still compiling from source like a champ |
 
-## 🤝 Wanna Borrow Bits?
-
-Go for it. Cherry-pick what works, rewrite what doesn't. This config exists because I stood on shoulders — pay it forward.
-
-Questions? Open an issue. Or don't. It's your machine.
+This vintage hardware is exactly *why* I default to CLI tools—every GUI byte counts when your laptop predates the smartphone era.
 
 ---
 
-_Built with ❄️ and excessive recompilation_
+## ⌨️ The Daily Drivers
+
+| Layer | Tool | Why |
+| :------ | :----- | :---- |
+| **Compositor** | Niri (scrollable tiling) + Noctalia | Wayland-native, no X baggage |
+| **Terminal** | Foot | Blazing fast Wayland terminal |
+| **Multiplexer** | Tmux | Persistent sessions, split panes |
+| **Shell** | Fish + Starship | Sensible defaults, beautiful prompt |
+| **Editor** | LazyVim (Neovim) | Preconfigured IDE via flake input |
+| **File Manager** | Yazi | TUI, vim motions, image previews |
+| **System Monitor** | htop, btop | Because `top` is boring |
+| **Fuzzy Find** | fzf, fd, ripgrep | Fast, keyboard-driven search |
+| **Music** | Spicetify (Spotify) + Spotatui | GUI when I feel fancy, TUI otherwise |
+| **Browser** | Firefox + w3m | Modern web + emergency terminal browsing |
+| **Notes** | Obsidian | The one GUI I actually need |
+| **DevOps** | k9s, kubectl, awscli2, terraform, ansible | Kubernetes/cloud wrangling |
+
+**GUI Apps?** Only a handful survive: Firefox, Obsidian, ProtonVPN, MPV, Imv, Zathura. Check `home/modules/packages.nix` for the full list.
+
+---
+
+## 📂 Layout
+
+```
+├── flake.nix               # Inputs + outputs (nixosConfiguration "toshiba")
+├── flake.lock              # Lockfile — commit it, never hand-edit
+├── hosts/toshiba/          # Host-specific NixOS modules
+│   ├── configuration.nix   # Main system entrypoint
+│   ├── hardware-configuration.nix  # Auto-generated, don't touch
+│   └── modules/            # agenix, boot, desktop, kernel, network, etc.
+├── home/                   # Home Manager module tree
+│   ├── home.nix            # User environment entrypoint
+│   └── modules/            # Fish, Foot, Git, Niri, Tmux, LazyVim, etc.
+├── dotfiles/               # Out-of-store symlinked configs
+├── secrets/                # Agenix-encrypted *.age files — SENSITIVE
+├── wallpaper/              # Pretty pictures (decorative only)
+├── update.py / update.sh   # Interactive rebuild/update workflows
+└── graphify-out/           # Generated knowledge graph (auto-generated)
+```
+
+---
+
+## 🚀 Quick Usage
+
+```bash
+# Dry-run to check what will change
+nixos-rebuild dry-build --flake ~/nixos-config#toshiba
+
+# Apply the configuration
+sudo nixos-rebuild switch --flake ~/nixos-config#toshiba
+
+# Update flake inputs (warning: compiles everything on master)
+nix flake update --flake ~/nixos-config
+
+# Interactive update workflow (commits, dry-build, prompt, switch, diff)
+./update.py
+```
+
+---
+
+## 🤝 License & Borrowing
+
+Licensed under MIT. Cherry-pick whatever's useful as a reference—modules, configs, or philosophy.
+
+Just remember: if you copy the kernel config or hardware-specific tweaks, you might wake up to a bricked system and regret.
+
+*Built with ❄️ and the sound of laptop fans at max RPM.*
