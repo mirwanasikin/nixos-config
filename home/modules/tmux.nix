@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   catppuccin.tmux.enable = true;
 

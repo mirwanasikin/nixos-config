@@ -1,6 +1,4 @@
-{
-  ...
-}:
+_:
 
 let
   kdeConnectDeviceId = "ecc1eb827f474ec9af7e269c5dae053a";
@@ -71,6 +69,8 @@ in
       yz = "yazi";
       lg = "lazygit";
       tm = "tmux";
+      k = "kubectl";
+      k-local = "set -gx KUBECONFIG ~/.kube/configs/k3s-local.yaml && kubectl get ns";
 
       # Apps
       blue = "bluetui";
