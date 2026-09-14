@@ -21,3 +21,6 @@ credentials
 
 # Graphify
 graphify-out
+
+# Python
+__pycache__

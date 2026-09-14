@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import os
 import subprocess
 import socket
 import sys
@@ -18,9 +20,14 @@ def main():
     run(["nix", "flake", "update", "--flake", str(FLAKE_DIR)])
 
     print("Simpan Commit terlebih dahulu")
-    run(["git", "add", "."], cwd=FLAKE_DIR)
-    commit_msg = f"update tanggal {datetime.now().strftime('%a %b %d %H:%M:%S %Y')}"
-    run(["git", "commit", "-m", commit_msg], cwd=FLAKE_DIR)
+    # Check for git changes
+    result = subprocess.run(["git", "diff", "--quiet"], cwd=FLAKE_DIR, check=False)
+    if result.returncode != 0:
+        run(["git", "add", "."], cwd=FLAKE_DIR)
+        commit_msg = f"update tanggal {datetime.now().strftime('%a %b %d %H:%M:%S %Y')}"
+        run(["git", "commit", "-m", commit_msg], cwd=FLAKE_DIR)
+    else:
+        print("Tidak ada perubahan, skip commit")
 
     print("DRY BUILD")
     result = subprocess.run(
@@ -34,10 +41,18 @@ def main():
 
     run(["less", str(LOG_FILE)])
 
-    answer = input("Mau lanjut update? (y/n) ")
+    auto_confirm = (
+        os.getenv("UPDATE_AUTO_CONFIRM", "").lower() == "y"
+        or "--yes" in sys.argv
+        or "-y" in sys.argv
+    )
+    if auto_confirm:
+        answer = "y"
+    else:
+        answer = input("Mau lanjut update? (y/n) ")
     if answer != "y":
         print("Oke update dibatalkan")
-        sys.exit(1)
+        sys.exit(130)
 
     print("Catat Generasi Sekarang")
     old_gen = get_current_generation(FLAKE_TARGET)
