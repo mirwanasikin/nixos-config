@@ -5,13 +5,13 @@
     enableZshIntegration = true;
 
     settings = {
-      format = ''[](red)$os$username[](bg:peach fg:red)$directory[](bg:yellow fg:peach)$git_branch$git_status[](fg:yellow bg:green)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:green bg:sapphire)$conda[](fg:sapphire bg:lavender)$time[ ](fg:lavender)$cmd_duration$line_break$character'';
+      format = "[](surface0)$os$username[](bg:peach fg:surface0)$directory[](fg:peach bg:green)$git_branch$git_status[](fg:green bg:teal)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:teal bg:blue)$docker_context$conda[](fg:blue bg:mauve)$time[ ](fg:mauve)$cmd_duration$line_break$character";
 
       palette = "catppuccin_mocha";
 
       os = {
         disabled = false;
-        style = "bg:red fg:crust";
+        style = "bg:surface0 fg:text";
         symbols = {
           Windows = "";
           Ubuntu = "󰕈";
@@ -38,13 +38,13 @@
 
       username = {
         show_always = true;
-        style_user = "bg:red fg:crust";
-        style_root = "bg:red fg:crust";
-        format = ''[ $user]($style)'';
+        style_user = "bg:surface0 fg:text";
+        style_root = "bg:surface0 fg:text";
+        format = "[ $user ]($style)";
       };
 
       directory = {
-        style = "bg:peach fg:crust";
+        style = "fg:mantle bg:peach";
         format = "[ $path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
@@ -59,87 +59,87 @@
 
       git_branch = {
         symbol = "";
-        style = "bg:yellow";
-        format = ''[[ $symbol $branch ](fg:crust bg:yellow)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol $branch ](fg:base bg:green)]($style)";
       };
 
       git_status = {
-        style = "bg:yellow";
-        format = ''[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'';
+        style = "bg:teal";
+        format = "[[($all_status$ahead_behind )](fg:base bg:green)]($style)";
       };
 
       nodejs = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       c = {
         symbol = " ";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       rust = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       golang = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       php = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       java = {
         symbol = " ";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       kotlin = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       haskell = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = "[[ $symbol( $version) ](fg:base bg:teal)]($style)";
       };
 
       python = {
         symbol = "";
-        style = "bg:green";
-        format = ''[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'';
+        style = "bg:teal";
+        format = ''[[ $symbol( $version)(\(#$virtualenv\)) ](fg:base bg:teal)]($style)'';
       };
 
       docker_context = {
         symbol = "";
-        style = "bg:sapphire";
-        format = ''[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'';
+        style = "bg:blue";
+        format = "[[ $symbol( $context) ](fg:mantle bg:blue)]($style)";
       };
 
       conda = {
         symbol = "  ";
-        style = "fg:crust bg:sapphire";
-        format = ''[$symbol$environment ]($style)'';
+        style = "fg:mantle bg:blue";
+        format = "[$symbol$environment ]($style)";
         ignore_base = false;
       };
 
       time = {
         disabled = false;
         time_format = "%R";
-        style = "bg:lavender";
-        format = ''[[  $time ](fg:crust bg:lavender)]($style)'';
+        style = "bg:mauve";
+        format = "[[  $time ](fg:mantle bg:mauve)]($style)";
       };
 
       line_break = {
@@ -159,7 +159,7 @@
       cmd_duration = {
         show_milliseconds = true;
         format = " in $duration ";
-        style = "bg:lavender";
+        style = "bg:mauve";
         disabled = false;
         show_notifications = true;
         min_time_to_notify = 45000;
