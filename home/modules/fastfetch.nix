@@ -19,6 +19,17 @@ _:
         };
       };
 
+      logo = {
+        color = {
+          "1" = "#bac2de";
+          "2" = "#9399b2";
+          "3" = "#bac2de";
+          "4" = "#9399b2";
+          "5" = "#bac2de";
+          "6" = "#9399b2";
+        };
+      };
+
       modules = [
         "break"
         {
@@ -28,85 +39,85 @@ _:
         "break"
         {
           key = "Distro       ";
-          keyColor = "red";
+          keyColor = "#b4befe";
           type = "os";
         }
         {
           key = "Machine      ";
-          keyColor = "green";
+          keyColor = "#b4befe";
           type = "host";
         }
         {
           key = "Kernel       ";
-          keyColor = "magenta";
+          keyColor = "#b4befe";
           type = "kernel";
         }
         {
           key = "Packages     ";
-          keyColor = "red";
+          keyColor = "#b4befe";
           type = "packages";
         }
         {
           key = "Uptime       ";
-          keyColor = "yellow";
+          keyColor = "#b4befe";
           type = "uptime";
         }
         {
           key = "OS Age       ";
-          keyColor = "blue";
+          keyColor = "#b4befe";
           type = "command";
           text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
         }
         {
           key = "Resolution   ";
-          keyColor = "green";
+          keyColor = "#b4befe";
           type = "display";
           compactType = "original-with-refresh-rate";
         }
         {
           key = "WM           ";
-          keyColor = "magenta";
+          keyColor = "#b4befe";
           type = "wm";
         }
         {
           key = "DE           ";
-          keyColor = "blue";
+          keyColor = "#b4befe";
           type = "de";
         }
         {
           key = "Shell        ";
-          keyColor = "green";
+          keyColor = "#b4befe";
           type = "shell";
         }
         {
           key = "Terminal     ";
-          keyColor = "blue";
+          keyColor = "#b4befe";
           type = "terminal";
         }
         {
           key = "CPU          ";
-          keyColor = "yellow";
+          keyColor = "#b4befe";
           type = "cpu";
         }
         {
           key = "Memory       ";
-          keyColor = "magenta";
+          keyColor = "#b4befe";
           type = "memory";
         }
         {
           key = "Disk         ";
-          keyColor = "green";
+          keyColor = "#b4befe";
           type = "disk";
         }
         {
           key = "Local IP     ";
-          keyColor = "red";
+          keyColor = "#b4befe";
           type = "localip";
           compact = true;
         }
         {
           key = "Media        ";
-          keyColor = "blue";
+          keyColor = "#b4befe";
           type = "media";
         }
         "break"
