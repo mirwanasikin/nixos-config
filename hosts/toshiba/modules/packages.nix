@@ -36,7 +36,6 @@
     smartmontools
     brightnessctl
     gvfs
-    simple-mtpfs
 
     # Debug Forensics
     file
