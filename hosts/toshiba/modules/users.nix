@@ -10,6 +10,7 @@
       "libvirtd"
       "video"
       "docker"
+      "hermes"
     ];
     shell = pkgs.fish;
   };

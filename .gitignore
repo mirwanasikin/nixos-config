@@ -13,10 +13,11 @@ id_nixos.pub
 .aws/
 credentials
 
-# Agenx
+# Agenix
 !secrets/
 !secrets/*.age
 !secrets/secrets.nix
+secrets.nix
 .aider*
 
 # Graphify

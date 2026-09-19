@@ -1,4 +1,4 @@
-_:
+{ config, ... }:
 
 {
   age = {
@@ -42,6 +42,10 @@ _:
         file = ../../../secrets/aws_creds.age;
         path = "/home/irwan/.aws/credentials";
         owner = "irwan";
+      };
+
+      hermes-env = {
+        file = ../../../secrets/hermes-env.age;
       };
     };
   };

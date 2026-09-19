@@ -11,4 +11,6 @@ in
   "gitlab_key.age".publicKeys = [ master ];
 
   "codeberg_key.age".publicKeys = [ master ];
+
+  "hermes-env.age".publicKeys = [ master ];
 }

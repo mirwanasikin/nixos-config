@@ -36,6 +36,7 @@
     smartmontools
     brightnessctl
     gvfs
+    ntfs3g
 
     # Debug Forensics
     file

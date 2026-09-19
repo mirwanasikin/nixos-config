@@ -14,6 +14,7 @@
     ./modules/users.nix
     ./modules/settings.nix
     ./modules/agenix.nix
+    ./modules/hermes.nix
     ./modules/kernel.nix
     ./modules/9router.nix
   ];
