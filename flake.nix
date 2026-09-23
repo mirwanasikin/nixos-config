@@ -29,7 +29,7 @@
     };
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
+    # hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
   outputs =
@@ -41,7 +41,7 @@
       catppuccin,
       lazyvim,
       niri,
-      hermes-agent,
+      # hermes-agent,
       ...
     }@inputs:
     let
@@ -73,7 +73,7 @@
           ./hosts/toshiba/configuration.nix
           home-manager.nixosModules.home-manager
           agenix.nixosModules.default
-          hermes-agent.nixosModules.default
+          # hermes-agent.nixosModules.default
           hmModule
         ];
       };

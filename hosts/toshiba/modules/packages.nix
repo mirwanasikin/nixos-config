@@ -24,10 +24,9 @@
     libnotify
 
     # Container Tools
-    podman
-    podman-compose
     docker
     docker-compose
+    kind
 
     # Hardware Tools
     pciutils

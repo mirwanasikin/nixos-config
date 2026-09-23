@@ -49,6 +49,59 @@
       id = 0;
       isDefault = true;
       name = "irwan";
+      userChrome = ''
+        /* --- 1. Sembunyikan Vertical Sidebar (Auto-Hide) --- */
+        #sidebar-box[sidebarcommand="_3a0f015b-232a-4630-8412-b1db010e6c55_sidebar-action"] #sidebar-header,
+        #sidebar-box {
+          --sidebar-width: 0px !important;
+          min-width: 0px !important;
+          max-width: 0px !important;
+          width: 0px !important;
+          transition: all 0.2s ease-in-out !important;
+          opacity: 0 !important;
+          z-index: 100 !important;
+        }
+
+        #sidebar-box:hover,
+        #sidebar-select-box:hover + #sidebar-box {
+          --sidebar-width: 240px !important;
+          min-width: 240px !important;
+          max-width: 240px !important;
+          width: 240px !important;
+          opacity: 1 !important;
+          position: absolute !important;
+          height: 100% !important;
+          box-shadow: 4px 0 15px rgba(0,0,0,0.3) !important;
+        }
+
+        #sidebar-splitter {
+          display: none !important;
+        }
+
+        /* --- 2. Sembunyikan Horizontal Tab Bar Atas (karena sudah pakai Vertical Tabs) --- */
+        #TabsToolbar {
+          visibility: collapse !important;
+        }
+
+        /* --- 3. Sembunyikan URL Bar / Navigation Toolbar (Auto-Hide saat Hover) --- */
+        #nav-bar {
+          height: 0px !important;
+          min-height: 0px !important;
+          overflow: hidden !important;
+          transition: all 0.2s ease-in-out !important;
+          opacity: 0 !important;
+          z-index: 99 !important;
+        }
+
+        /* Munculkan Navbar saat kursor mouse diarahkan ke bagian paling atas layar */
+        #navigator-toolbox:hover #nav-bar,
+        #nav-bar:focus-within {
+          height: auto !important;
+          min-height: 40px !important;
+          overflow: visible !important;
+          opacity: 1 !important;
+        }
+      '';
 
       settings = {
         # Telemetry
@@ -98,6 +151,11 @@
         "browser.send_pings" = false;
         "browser.urlbar.suggest.searches" = false;
         "browser.urlbar.suggest.topsites" = false;
+
+        # Appearance
+        "browser.nova.enabled" = true;
+        "sidebar.verticalTabs" = true;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
         # DoH via Cloudflare
         "network.trr.mode" = 3;

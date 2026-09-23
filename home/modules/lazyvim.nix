@@ -13,6 +13,7 @@
         python = {
           enable = true;
           installDependencies = true;
+          installRuntimeDependencies = true;
         };
         rust = {
           enable = true;
@@ -21,6 +22,7 @@
         yaml = {
           enable = true;
           installDependencies = true;
+          installRuntimeDependencies = true;
         };
         docker = {
           enable = true;
@@ -45,6 +47,12 @@
     extraPackages = with pkgs; [
       tofu-ls
       clang-tools
+      python3
+      pyright
+      ruff
+      yaml-language-server
+      prettier
+      yamllint
     ];
 
     config = {

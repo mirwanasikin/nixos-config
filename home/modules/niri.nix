@@ -146,6 +146,11 @@
           hotkey-overlay.title = "Run an Application: noctalia";
         };
 
+        "Mod+B" = {
+          action = spawn-sh "firefox";
+          hotkey-overlay.title = "Run an Application: Firefox";
+        };
+
         "Super+Alt+L" = {
           action = spawn-sh "noctalia msg session lock";
           hotkey-overlay.title = "Lock the Screen: Noctalia Lock ";

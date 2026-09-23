@@ -33,5 +33,9 @@
 
     # Rust
     cargo
+
+    # Python
+    ruff
+    python3
   ];
 }
