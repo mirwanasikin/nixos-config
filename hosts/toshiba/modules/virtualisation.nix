@@ -16,7 +16,7 @@
 
     # VM
     libvirtd = {
-      enable = false;
+      enable = true;
       qemu = {
         package = pkgs.qemu_kvm;
         runAsRoot = true;
@@ -25,5 +25,5 @@
     };
   };
 
-  programs.virt-manager.enable = false;
+  programs.virt-manager.enable = true;
 }
