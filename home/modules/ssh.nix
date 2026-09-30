@@ -24,6 +24,11 @@ _:
         user = "git";
         identityFile = "~/.ssh/codeberg_key";
       };
+      "rhel1" = {
+        hostname = "192.168.122.47";
+        user = "tenka";
+        identityFile = "~/.ssh/lab_vm_rhel1";
+      };
     };
   };
 
