@@ -1,11 +1,10 @@
-_:
-{
+_: {
   programs = {
     git = {
       enable = true;
       settings = {
         user.name = "M. Irwan Asikin";
-        user.email = "225542013+mirwanasikin@users.noreply.github.com";
+        user.email = "mirwanasikin@proton.me";
         init.defaultBranch = "main";
         pull.rebase = false;
       };
