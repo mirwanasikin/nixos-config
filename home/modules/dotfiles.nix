@@ -9,15 +9,10 @@ _:
     accent = "mauve";
     starship.enable = false;
     gtk.icon.enable = false;
+    yazi.enable = false;
   };
 
   programs = {
-    # Yazi
-    yazi = {
-      enable = true;
-      shellWrapperName = "y";
-    };
-
     # Bat
     bat.enable = true;
 

@@ -12,6 +12,7 @@
     ouch
     unrar
     watchexec
+    ripdrag
 
     # System monitoring
     htop
@@ -60,7 +61,7 @@
     w3m
     aerc
 
-    # Vibe Coding
+# Vibe Coding
     opencode
     graphify
   ];

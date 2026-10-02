@@ -22,6 +22,7 @@
     ./modules/lazyvim.nix
     ./modules/noctalia.nix
     ./modules/niri.nix
+    ./modules/yazi.nix
   ];
 
   home = {
