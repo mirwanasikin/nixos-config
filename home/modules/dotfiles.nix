@@ -22,6 +22,23 @@ _:
     # Eza
     eza.enable = true;
 
+    # Aerc
+    aerc = {
+      enable = true;
+      extraConfig = {
+        filters = {
+          "text/plain" = "less";
+          "text/html" = "w3m -T text/html";
+        };
+      };
+    };
+
+    # Cava
+    cava.enable = true;
+
+    # Mpv
+    mpv.enable = true;
+
     # Btop
     btop = {
       enable = true;

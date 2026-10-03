@@ -46,21 +46,18 @@
 
     # Media & Apps
     proton-vpn
-    mpv
     imv
     obsidian
-    cava
     playerctl
-    zathura
     gowall
     spotatui
     yt-dlp
     chafa
     gophertube
+    zathura
 
     # Browser
     w3m
-    aerc
 
     # Vibe Coding
     opencode
