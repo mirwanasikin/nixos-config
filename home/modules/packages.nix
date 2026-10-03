@@ -21,6 +21,7 @@
     nix-output-monitor
     nvd
     nh
+    hydra-check
 
     # Dev tools
     gh
@@ -61,7 +62,7 @@
     w3m
     aerc
 
-# Vibe Coding
+    # Vibe Coding
     opencode
     graphify
   ];
