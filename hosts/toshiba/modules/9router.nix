@@ -5,7 +5,7 @@ _:
     backend = "docker";
 
     containers."9router" = {
-      image = "decolua/9router:0.5.91";
+      image = "decolua/9router:0.5.95";
       autoStart = true;
 
       ports = [
