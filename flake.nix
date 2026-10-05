@@ -70,6 +70,7 @@
           {
             nixpkgs.overlays = [ inputs.nur.overlays.default ];
           }
+          inputs.catppuccin.nixosModules.catppuccin
           ./hosts/toshiba/configuration.nix
           home-manager.nixosModules.home-manager
           agenix.nixosModules.default

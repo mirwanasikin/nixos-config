@@ -22,6 +22,14 @@
     };
   };
 
+  # Catppuccin
+  catppuccin = {
+    enable = true;
+    autoEnable = true;
+    flavor = "mocha";
+    accent = "mauve";
+  };
+
   # XDG Portals
   xdg.portal = {
     enable = true;

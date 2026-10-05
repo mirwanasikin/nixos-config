@@ -23,23 +23,11 @@
       grub = {
         enable = true;
         device = "/dev/sda";
-        theme =
-          pkgs.fetchFromGitHub {
-            owner = "catppuccin";
-            repo = "grub";
-            rev = "main";
-            hash = "sha256-jgM22pvCQvb0bjQQXoiqGMgScR9AgCK3OfDF5Ud+/mk=";
-          }
-          + "/src/catppuccin-macchiato-grub-theme";
       };
     };
 
     # plymouth
-    plymouth = {
-      enable = true;
-      themePackages = [ pkgs.catppuccin-plymouth ];
-      theme = "catppuccin-macchiato";
-    };
+    plymouth.enable = true;
 
     blacklistedKernelModules = [
       "esp4"
