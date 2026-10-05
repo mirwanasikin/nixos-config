@@ -216,12 +216,6 @@ _:
         mode = "dark";
         source = "builtin";
         wallpaper_scheme = "ADW";
-
-        templates = {
-          builtin_ids = [
-            "cava"
-          ];
-        };
       };
 
       wallpaper = {
