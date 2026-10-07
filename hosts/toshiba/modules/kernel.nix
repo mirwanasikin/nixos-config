@@ -12,7 +12,7 @@
   # NOTE: Kernel Latest
   boot = {
     # Latest, Zen and RC
-    kernelPackages = pkgs.linuxKernel.packages.linux_testing; # Kernel RC
+    # kernelPackages = pkgs.linuxKernel.packages.linux_testing; # Kernel RC
     # kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
     # kernelPackages = pkgs.linuxKernel.packages.linux_zen; # Kernel zen
 
@@ -65,6 +65,7 @@
 
   hardware.deviceTree.enable = false;
 
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-rc;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v2;

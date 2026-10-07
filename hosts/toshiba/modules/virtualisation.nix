@@ -5,11 +5,12 @@
   virtualisation = {
     # Podman
     containers = {
-      enable = false;
+      enable = true;
       policy = {
         default = [ { type = "insecureAcceptAnything"; } ];
       };
     };
+    podman.enable = true;
 
     # Docker
     docker.enable = true;

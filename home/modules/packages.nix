@@ -3,10 +3,9 @@
 {
   home.packages = with pkgs; [
     # CLI essentials
-    eza
     fd
-    fzf
     ripgrep
+    lazydocker
     glow
     hyperfine
     ouch
@@ -25,7 +24,6 @@
 
     # Dev tools
     gh
-    k9s
     terragrunt
     kubernetes-helm
     jq

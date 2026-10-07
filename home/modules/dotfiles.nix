@@ -10,6 +10,8 @@ _:
     starship.enable = false;
     gtk.icon.enable = false;
     yazi.enable = false;
+    k9s.transparent = true;
+    cava.transparent = true;
   };
 
   programs = {
