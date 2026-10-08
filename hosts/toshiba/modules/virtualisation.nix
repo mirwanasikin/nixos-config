@@ -6,6 +6,11 @@
     # Podman
     containers = {
       enable = true;
+      registries.search = [
+        "docker.io"
+        "quay.io"
+        "ghcr.io"
+      ];
       policy = {
         default = [ { type = "insecureAcceptAnything"; } ];
       };
