@@ -53,6 +53,12 @@ _:
 
     # K9s
     k9s.enable = true;
+
+    # direnv
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
   };
 
 }
