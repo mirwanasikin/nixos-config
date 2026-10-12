@@ -24,6 +24,7 @@
     ./modules/niri.nix
     ./modules/yazi.nix
     ./modules/helium.nix
+    ./modules/wordcraft.nix
   ];
 
   home = {
