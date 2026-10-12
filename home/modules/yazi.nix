@@ -208,7 +208,7 @@ in
           # Sudo
           {
             on = [
-              "s"
+              "v"
               "p"
             ];
             run = "plugin sudo -- paste";
@@ -216,7 +216,7 @@ in
           }
           {
             on = [
-              "s"
+              "v"
               "r"
             ];
             run = "plugin sudo -- rename";
@@ -224,7 +224,7 @@ in
           }
           {
             on = [
-              "s"
+              "v"
               "d"
             ];
             run = "plugin sudo -- remove";
