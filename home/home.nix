@@ -23,6 +23,7 @@
     ./modules/noctalia.nix
     ./modules/niri.nix
     ./modules/yazi.nix
+    ./modules/helium.nix
   ];
 
   home = {
