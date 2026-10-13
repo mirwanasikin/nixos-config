@@ -4,7 +4,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./modules/foot.nix
-    ./modules/firefox.nix
+    # ./modules/firefox.nix
     ./modules/spicetify.nix
     ./modules/packages.nix
     ./modules/dotfiles.nix
@@ -24,7 +24,7 @@
     ./modules/niri.nix
     ./modules/yazi.nix
     ./modules/helium.nix
-    ./modules/wordcraft.nix
+    # ./modules/wordcraft.nix
   ];
 
   home = {
