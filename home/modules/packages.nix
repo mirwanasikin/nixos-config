@@ -44,6 +44,8 @@
 
     # Media & Apps
     proton-vpn
+    proton-pass
+    proton-authenticator
     imv
     obsidian
     playerctl
