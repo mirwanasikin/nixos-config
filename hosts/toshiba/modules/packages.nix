@@ -50,7 +50,7 @@
     gcc
     gnumake
     gdb
-    python3
+    python315
     clang
     rustc
     zig
