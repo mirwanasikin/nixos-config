@@ -13,6 +13,9 @@ _:
   # System Version
   system.stateVersion = "26.11";
 
+  # Environment
+  environment.enableAllTerminfo = true;
+
   # Checkov
   # nixpkgs.config.permittedInsecurePackages = [
   #   "python3.14-ecdsa-0.19.2"
