@@ -16,6 +16,7 @@
     iperf
     nmap
     tcpdump
+    iw
 
     # Niri
     niri
