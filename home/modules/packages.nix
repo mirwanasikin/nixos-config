@@ -21,6 +21,7 @@
     nvd
     nh
     hydra-check
+    speedtest-cli
 
     # Dev tools
     gh
