@@ -17,9 +17,9 @@
     # kernelPackages = pkgs.linuxKernel.packages.linux_zen; # Kernel zen
 
     # Kernel LTS
-    # kernelPackages = pkgs.linuxPackages; # Kernel LTS
+    kernelPackages = pkgs.linuxPackages; # Kernel LTS
     # kernelPackages = pkgs.linuxKernel.packages.linux_xanmod; # Kernel xanmod
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
+    # kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_6; # Kernel LTS 6.6
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.1
     # kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
@@ -75,11 +75,6 @@
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
 
   # Binary cache
-  # nix.settings.substituters = [
-  #   "https://cache.nixos.org"
-  #   "https://attic.xuyh0120.win/lantian"
-  #   # "https://cache.garnix.io"
-  # ];
   # nix.settings.trusted-public-keys = [
   #   "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
   #   "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="

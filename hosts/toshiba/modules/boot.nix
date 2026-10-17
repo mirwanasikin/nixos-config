@@ -6,17 +6,16 @@
     kernelParams = [
       "quiet"
       "splash"
+      "udev.log_level=3"
     ];
 
-    consoleLogLevel = 0;
-
-    initrd = {
-      verbose = false;
-      kernelModules = [ "i915" ];
-      systemd.enable = true;
-    };
+    consoleLogLevel = 3;
 
     resumeDevice = "/dev/disk/by-label/swap";
+
+    initrd = {
+      kernelModules = [ "i915" ];
+    };
 
     # GRUB
     loader = {
@@ -26,7 +25,6 @@
       };
     };
 
-    # plymouth
     plymouth.enable = true;
 
     blacklistedKernelModules = [

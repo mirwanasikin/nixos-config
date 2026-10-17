@@ -28,6 +28,7 @@
     autoEnable = true;
     flavor = "mocha";
     accent = "mauve";
+    plymouth.enable = true;
   };
 
   # XDG Portals

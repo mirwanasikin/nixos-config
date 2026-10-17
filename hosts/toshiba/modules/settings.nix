@@ -16,6 +16,13 @@ _:
   # Environment
   environment.enableAllTerminfo = true;
 
+  # Binary
+  nix.settings.substituters = [
+    "https://cache.nixos.org"
+    # "https://attic.xuyh0120.win/lantian"
+    # "https://cache.garnix.io"
+  ];
+
   # Checkov
   # nixpkgs.config.permittedInsecurePackages = [
   #   "python3.14-ecdsa-0.19.2"
