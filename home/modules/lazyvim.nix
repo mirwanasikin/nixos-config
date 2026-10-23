@@ -47,7 +47,7 @@
     extraPackages = with pkgs; [
       tofu-ls
       clang-tools
-      python3
+      python315
       pyright
       ruff
       yaml-language-server
