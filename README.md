@@ -13,10 +13,9 @@
 ---
 
 > [!CAUTION]
-> **Living on the Edge (Literally):** This configuration tracks **`nixpkgs/master`**.
+> **Living on the Edge:** This configuration tracks **`nixpkgs/nixos-unstable-small`**.
 >
-> - **Zero binary cache guarantees:** You _will_ hear the CPU fan scream as it compiles packages from source.
-> - **Things break:** master moves fast and breaks things faster.
+> - **Binary might be haven't build:** You _will_ hear the CPU fan scream as it compiles packages from source yeah most of them already compiled but sometimes you'll find a compile.
 > - If you want peace of mind or value your battery life, stick to `nixos-unstable` or the official stable channels.
 
 > [!IMPORTANT]
@@ -24,6 +23,8 @@
 >
 > - Decryption requires matching private SSH keys configured for this specific host.
 > - This repository is my personal blueprint and reference, **not** a turnkey, plug-and-play distro installer.
+>
+> **Also this repo now is managed with AI so that's why there's AGENTS.md**
 
 ---
 
@@ -82,7 +83,7 @@ This vintage hardware is exactly _why_ I default to CLI tools—every GUI byte c
 | **Notes**          | Obsidian                                  | The one GUI I actually need              |
 | **DevOps**         | k9s, kubectl, awscli2, terraform, ansible | Kubernetes/cloud wrangling               |
 
-**GUI Apps?** Only a handful survive: Firefox, Obsidian, ProtonVPN, MPV, Imv, Zathura. Check `home/modules/packages.nix` for the full list.
+**GUI Apps?** Only a handful survive: Helium/Google Chrome, Obsidian, ProtonVPN, MPV, Imv, Zathura. Check `home/modules/packages.nix` for the full list.
 
 ---
 
@@ -104,6 +105,9 @@ This vintage hardware is exactly _why_ I default to CLI tools—every GUI byte c
 ├── update.py / update.sh   # Interactive rebuild/update workflows
 └── graphify-out/           # Generated knowledge graph (auto-generated)
 ```
+
+> [!NOTE]
+> there's no different effect between shell script and python script.
 
 ---
 
@@ -130,6 +134,3 @@ nix flake update --flake ~/nixos-config
 Licensed under MIT. Cherry-pick whatever's useful as a reference—modules, configs, or philosophy.
 
 Just remember: if you copy the kernel config or hardware-specific tweaks, you might wake up to a bricked system and regret.
-
--
-
