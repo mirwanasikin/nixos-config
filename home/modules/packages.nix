@@ -63,6 +63,7 @@
     # Vibe Coding
     opencode
     graphify
+    wlctl
   ];
 
 }

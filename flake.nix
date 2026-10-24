@@ -73,7 +73,12 @@
         specialArgs = { inherit inputs agenix; };
         modules = [
           {
-            nixpkgs.overlays = [ inputs.nur.overlays.default ];
+            nixpkgs.overlays = [
+              inputs.nur.overlays.default
+              (final: prev: {
+                wlctl = final.callPackage ./pkgs/wlctl-package.nix { };
+              })
+            ];
           }
           inputs.catppuccin.nixosModules.catppuccin
           ./hosts/toshiba/configuration.nix

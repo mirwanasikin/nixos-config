@@ -25,3 +25,12 @@ graphify-out
 
 # Python
 __pycache__
+
+# Rust / Nix local builds
+target/
+.direnv/
+.envrc.cache
+node_modules/
+dist/
+build/
+
