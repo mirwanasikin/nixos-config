@@ -57,7 +57,6 @@
 
     # Browser
     w3m
-    google-chrome
 
     # Vibe Coding
     opencode
