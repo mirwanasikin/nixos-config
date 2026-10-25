@@ -25,6 +25,7 @@
 
     # Dev tools
     gh
+    glab
     terragrunt
     kubernetes-helm
     jq
@@ -44,9 +45,6 @@
     bluetui
 
     # Media & Apps
-    proton-vpn
-    proton-pass
-    proton-authenticator
     imv
     obsidian
     playerctl
