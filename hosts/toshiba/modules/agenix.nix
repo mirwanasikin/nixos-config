@@ -28,25 +28,6 @@
         owner = "irwan";
         mode = "600";
       };
-
-      # AWS SSH Key (Deleted Soon)
-      aws-ec2 = {
-        file = ../../../secrets/aws_ec2_pem.age;
-        path = "/home/irwan/.ssh/test_1.pem";
-        owner = "irwan";
-        mode = "600";
-      };
-
-      # AWS credentials (Deleted Soon)
-      aws-creds = {
-        file = ../../../secrets/aws_creds.age;
-        path = "/home/irwan/.aws/credentials";
-        owner = "irwan";
-      };
-
-      hermes-env = {
-        file = ../../../secrets/hermes-env.age;
-      };
     };
   };
 }

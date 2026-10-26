@@ -4,13 +4,7 @@ in
 {
   "github_ssh.age".publicKeys = [ master ];
 
-  "aws_ec2_pem.age".publicKeys = [ master ];
-
-  "aws_creds.age".publicKeys = [ master ];
-
   "gitlab_key.age".publicKeys = [ master ];
 
   "codeberg_key.age".publicKeys = [ master ];
-
-  "hermes-env.age".publicKeys = [ master ];
 }
