@@ -59,7 +59,9 @@
     w3m
 
     # Vibe Coding
+    chatgpt
     opencode
+    claude-code
     graphify
     wlctl
   ];
