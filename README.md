@@ -120,7 +120,7 @@ nixos-rebuild dry-build --flake ~/nixos-config#toshiba
 # Apply the configuration
 sudo nixos-rebuild switch --flake ~/nixos-config#toshiba
 
-# Update flake inputs (warning: compiles everything on master)
+# Update flake inputs (warning: may compile many packages from nixos-unstable-small)
 nix flake update --flake ~/nixos-config
 
 # Interactive update workflow (commits, dry-build, prompt, switch, diff)

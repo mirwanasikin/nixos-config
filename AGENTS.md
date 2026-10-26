@@ -4,7 +4,7 @@ Guidance for AI agents working in this repository.
 
 ## What this is
 
-A personal NixOS configuration using a Flake. Single machine target (hostname `toshiba`, an old 2010 laptop), `x86_64-linux`, running **nixpkgs master** — expect heavy recompilation, no binary cache guarantee. It doubles as a reference config, not a template.
+A personal NixOS configuration using a Flake. Single machine target (hostname `toshiba`, an old 2010 laptop), `x86_64-linux`, running **nixpkgs `nixos-unstable-small`** — expect heavy recompilation, no binary cache guarantee. It doubles as a reference config, not a template.
 
 Design values (see README): simplicity, reproducibility, keyboard-driven, terminal-centric (TMUX/Foot), low resource usage.
 
@@ -50,7 +50,7 @@ nixos-rebuild dry-build --flake ~/nixos-config#toshiba
 # Apply
 sudo nixos-rebuild switch --flake ~/nixos-config#toshiba
 
-# Update inputs (this is the dangerous/long one — nixpkgs master rebuilds a lot)
+# Update inputs (this is the dangerous/long one — nixpkgs nixos-unstable-small rebuilds a lot)
 nix flake update --flake ~/nixos-config
 
 # Or the one-shot interactive flow (commits, dry-build, prompt, switch, nvd diff)
@@ -67,7 +67,7 @@ statix check
 
 ## Gotchas
 
-- `nixpkgs` tracks **master** (see the commented-out `nixpkgs-unstable` line in `flake.nix`). Updating pulls brand-new packages; things can break and builds take hours.
+- `nixpkgs` tracks **`nixos-unstable-small`** (see `flake.nix`). Updating pulls brand-new packages; things can break and builds take hours.
 - The inverse: inputs are deliberately *not* fully follows-pinned in places (NUR, catppuccin, lazyvim) — check `flake.nix` before assuming an input is pinned.
 - This machine runs a custom/unusual kernel stack and wireless hardening is disabled. Don't copy `hosts/toshiba/modules/kernel.nix` blindly to other machines.
 - Hardware config is machine-generated; edit via `nixos-generate-config` if the hardware changes.

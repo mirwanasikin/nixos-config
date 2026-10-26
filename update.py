@@ -41,6 +41,10 @@ def main():
 
     run(["less", str(LOG_FILE)])
 
+    if result.returncode != 0:
+        print(f"Dry build gagal (exit code {result.returncode}); update dibatalkan.")
+        sys.exit(result.returncode)
+
     auto_confirm = (
         os.getenv("UPDATE_AUTO_CONFIRM", "").lower() == "y"
         or "--yes" in sys.argv
