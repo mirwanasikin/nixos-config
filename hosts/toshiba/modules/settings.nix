@@ -14,7 +14,10 @@ _:
   system.stateVersion = "26.11";
 
   # Environment
-  environment.enableAllTerminfo = true;
+  environment = {
+    enableAllTerminfo = true;
+    localBinInPath = true;
+  };
 
   # Binary
   nix.settings.substituters = [
