@@ -38,6 +38,8 @@
     kubectl
     kubeseal
     android-tools
+    age
+    sops
 
     # Shell utilities
     tldr
