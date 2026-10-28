@@ -102,7 +102,7 @@ _:
             type = "login_box";
 
             settings = {
-              background_color = "surface_variant";
+              background_color = "surface_container";
               background_opacity = 0.88;
               background_radius = 12.0;
               center_password_text = false;
@@ -237,7 +237,7 @@ _:
 
       widget = {
         network.show_label = false;
-        sysmon.stat = "disk_pct";
+        sysmon.stat = "disk_used_pct";
         volume.show_label = false;
       };
     };

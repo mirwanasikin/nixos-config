@@ -14,6 +14,11 @@
       keyboard.layout = "us";
       appearance = {
         scheme = "Catppuccin";
+        wallpaper = {
+          path = ../../../wallpaper/dark-forest.jpg;
+          fill_mode = "crop";
+          fill_color = "#1e1e2e";
+        };
       };
     };
     cursorTheme = {
