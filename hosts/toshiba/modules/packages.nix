@@ -61,7 +61,6 @@
     inputs.agenix.packages."x86_64-linux".default
 
     # Theming
-    catppuccin-sddm
     bibata-cursors
 
     # Screenshot

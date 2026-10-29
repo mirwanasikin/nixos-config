@@ -17,10 +17,10 @@
     # kernelPackages = pkgs.linuxKernel.packages.linux_zen; # Kernel zen
 
     # Kernel LTS
-    kernelPackages = pkgs.linuxPackages; # Kernel LTS
+    # kernelPackages = pkgs.linuxPackages; # Kernel LTS
     # kernelPackages = pkgs.linuxKernel.packages.linux_xanmod; # Kernel xanmod
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
-    # kernelPackages = pkgs.linuxKernel.packages.linux_6_6; # Kernel LTS 6.6
+    kernelPackages = pkgs.linuxKernel.packages.linux_6_6; # Kernel LTS 6.6
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.1
     # kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
   };

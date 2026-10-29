@@ -18,7 +18,6 @@
     ./modules/git.nix
     ./modules/ssh.nix
     ./modules/services.nix
-    ./modules/wf-recorder.nix
     ./modules/lazyvim.nix
     ./modules/noctalia.nix
     ./modules/niri.nix

@@ -43,7 +43,6 @@
 
     # Shell utilities
     tldr
-    figlet
     bluetui
 
     # Media & Apps
