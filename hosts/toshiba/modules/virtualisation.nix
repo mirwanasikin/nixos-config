@@ -15,7 +15,15 @@
     # Docker
     docker.enable = true;
 
-    # VM
+    # Quadlet for managing podman containers via systemd
+    quadlet = {
+      enable = true;
+      containers.hello-world = {
+        containerConfig.Image = "docker.io/library/hello-world:latest";
+        containerConfig.AutoUpdate = "registry";
+      };
+    };
+
     libvirtd = {
       enable = true;
       qemu = {

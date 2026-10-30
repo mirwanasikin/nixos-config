@@ -22,7 +22,6 @@
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_12; # Kernel LTS 6.12
     kernelPackages = pkgs.linuxKernel.packages.linux_6_6; # Kernel LTS 6.6
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_1; # Kernel LTS 6.1
-    # kernelPackages = pkgs.linuxKernel.packages.linux_5_15; # Kernel LTS 5.15
   };
 
   # Kernel Compile straight from torvalds

@@ -34,6 +34,10 @@
     };
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
+    quadlet-nix = {
+      url = "github:mirkolenz/quadlet-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
@@ -46,6 +50,7 @@
       catppuccin,
       lazyvim,
       niri,
+      quadlet-nix,
       # hermes-agent,
       ...
     }@inputs:
@@ -81,6 +86,7 @@
             ];
           }
           inputs.catppuccin.nixosModules.catppuccin
+          quadlet-nix.nixosModules.default
           ./hosts/toshiba/configuration.nix
           home-manager.nixosModules.home-manager
           agenix.nixosModules.default

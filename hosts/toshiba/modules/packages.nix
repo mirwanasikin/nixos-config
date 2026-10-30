@@ -42,7 +42,6 @@
     # Debug Forensics
     file
     binwalk
-    gdb
     strace
     lsof
 
