@@ -29,6 +29,11 @@ _:
         user = "tenka";
         identityFile = "~/.ssh/lab_vm_rhel1";
       };
+      "alma-vm" = {
+        hostname = "192.168.122.50";
+        user = "tenka";
+        identityFile = "~/.ssh/alma_key";
+      };
     };
   };
 
