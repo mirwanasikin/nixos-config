@@ -229,10 +229,10 @@ _:
           recursive = true;
         };
 
-        default.path = "/home/irwan/Pictures/Wallpaper/suisei3.jpg";
-        last.path = "/home/irwan/Pictures/Wallpaper/suisei3.jpg";
+        default.path = "/home/irwan/Pictures/Wallpaper/haimiya-senpai.jpg";
+        last.path = "/home/irwan/Pictures/Wallpaper/haimiya-senpai.jpg";
 
-        monitors."LVDS-1".path = "/home/irwan/Pictures/Wallpaper/suisei3.jpg";
+        monitors."LVDS-1".path = "/home/irwan/Pictures/Wallpaper/haimiya-senpai.jpg";
       };
 
       widget = {

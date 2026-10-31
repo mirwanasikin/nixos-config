@@ -147,7 +147,7 @@
         };
 
         "Mod+B" = {
-          action = spawn-sh "firefox";
+          action = spawn-sh "helium";
           hotkey-overlay.title = "Run an Application: Firefox";
         };
 
