@@ -19,8 +19,13 @@ _:
     bat.enable = true;
 
     # Lazygit
-    lazygit.enable = true;
+    lazygit = {
+      enable = true;
 
+      settings = {
+        git.commit.signOff = true;
+      };
+    };
     # Eza
     eza.enable = true;
 
