@@ -24,6 +24,7 @@
     ./modules/yazi.nix
     ./modules/helium.nix
     ./modules/wordcraft.nix
+    ./modules/claude.nix
     # ./modules/deckcraft.nix
     # ./modules/gridcraft.nix
   ];
