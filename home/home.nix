@@ -23,7 +23,9 @@
     ./modules/niri.nix
     ./modules/yazi.nix
     ./modules/helium.nix
-    # ./modules/wordcraft.nix
+    ./modules/wordcraft.nix
+    # ./modules/deckcraft.nix
+    # ./modules/gridcraft.nix
   ];
 
   home = {

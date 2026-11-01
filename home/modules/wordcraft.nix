@@ -2,26 +2,29 @@
 
 let
   pname = "wordcraft";
-  version = "0.5.0";
+  version = "0.13.2";
 
   src = pkgs.fetchurl {
     url = "https://github.com/storytold/wordcraft/releases/download/v${version}/wordcraft-${version}-linux-x86_64.deb";
-    sha256 = "1cjx5qfhczwc1i4qak0z2idgsf6v1bb5pvy7177pw2a6p3rkqd7x";
+    sha256 = "0s6c12914rlv9aczlyjdhahqzmhp40k68vzxdh8llpjd7v2gakwb";
   };
 
   wordcraft-pkg = pkgs.stdenv.mkDerivation {
     inherit pname version src;
-    nativeBuildInputs = with pkgs; [ dpkg autoPatchelfHook makeWrapper ];
+    nativeBuildInputs = with pkgs; [
+      dpkg
+      autoPatchelfHook
+      makeWrapper
+    ];
     buildInputs = with pkgs; [
       stdenv.cc.cc.lib
       zlib
       fontconfig
       freetype
       libx11
-      libX11
-      libXcursor
-      libXi
-      libXrandr
+      libxcursor
+      libxi
+      libxrandr
       libxkbcommon
       wayland
       vulkan-loader
@@ -40,15 +43,24 @@ let
 
     postFixup = ''
       wrapProgram $out/bin/wordcraft \
-        --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath (with pkgs; [
-          wayland
-          libxkbcommon
-          vulkan-loader
-          libGL
-          dbus
-          zenity
-          gtk3
-        ])}
+        --prefix LD_LIBRARY_PATH : ${
+          pkgs.lib.makeLibraryPath (
+            with pkgs;
+            [
+              libx11
+              libxcursor
+              libxi
+              libxrandr
+              wayland
+              libxkbcommon
+              vulkan-loader
+              libGL
+              dbus
+              zenity
+              gtk3
+            ]
+          )
+        }
     '';
   };
 
