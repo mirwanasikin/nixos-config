@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
-import subprocess
 import socket
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -16,7 +16,44 @@ def run(cmd, **kwargs):
     return subprocess.run(cmd, check=True, **kwargs)
 
 
+def update_yazi_hash():
+    """Fetch latest catppuccin/yazi revision and sha256, then update home/modules/yazi.nix"""
+    import re
+
+    yazi_path = os.path.join(FLAKE_DIR, "home", "modules", "yazi.nix")
+    print("Updating yazi.nix with latest rev and sha256...")
+    # Use nix-prefetch-git to get rev and sha256
+    result = subprocess.run(
+        ["nix-prefetch-git", "https://github.com/catppuccin/yazi"],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    rev = None
+    sha256 = None
+    for line in result.stdout.splitlines():
+        if line.startswith("rev ="):
+            rev = line.split("=")[1].strip().strip('"')
+        elif line.startswith("sha256 ="):
+            sha256 = line.split("=")[1].strip().strip('"')
+    if not rev or not sha256:
+        raise RuntimeError("Failed to obtain rev/sha256 from nix-prefetch-git")
+    # Read file
+    content = yazi_path.read_text()
+    # Replace rev and sha256 within fetchFromGitHub block
+    content = re.sub('rev = "[^"]*"', f'rev = "{rev}"', content)
+    content = re.sub('sha256 = "[^"]*"', f'sha256 = "{sha256}"', content)
+    yazi_path.write_text(content)
+    print(f"Updated yazi.nix to rev {rev} and sha256 {sha256}")
+
+
 def main():
+    # Update yazi.nix before flake update
+    try:
+        update_yazi_hash()
+    except Exception as e:
+        print(f"Warning: could not update yazi.nix: {e}")
+        # continue anyway
     run(["nix", "flake", "update", "--flake", str(FLAKE_DIR)])
 
     print("Simpan Commit terlebih dahulu")
