@@ -17,6 +17,7 @@
     ./modules/formatter.nix
     ./modules/git.nix
     ./modules/ssh.nix
+    ./modules/systemd.nix
     ./modules/services.nix
     ./modules/lazyvim.nix
     ./modules/noctalia.nix

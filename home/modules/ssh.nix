@@ -38,4 +38,6 @@ _:
   };
 
   services.ssh-agent.enable = true;
+
+  # systemd user services moved to modules/systemd.nix
 }
