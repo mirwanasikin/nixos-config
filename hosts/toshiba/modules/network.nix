@@ -6,17 +6,17 @@ _:
     hostName = "toshiba";
     networkmanager.enable = true;
 
-    hosts = {
-      "127.0.0.1" = [ "9router.irwan.local" ];
-    };
+    # hosts = {
+    #   "127.0.0.1" = [ "9router.irwan.local" ];
+    # };
 
     firewall = {
       enable = true;
       trustedInterfaces = [ "tailscale0" ];
-      interfaces.lo.allowedTCPPorts = [
-        80
-        443
-      ];
+      # interfaces.lo.allowedTCPPorts = [
+      #   80
+      #   443
+      # ];
     };
   };
 
@@ -37,13 +37,13 @@ _:
     };
 
     # Caddy
-    caddy = {
-      enable = true;
-      virtualHosts."9router.irwan.local" = {
-        extraConfig = ''
-          reverse_proxy 127.0.0.1:20128
-        '';
-      };
-    };
+    # caddy = {
+    #   enable = true;
+    #   virtualHosts."9router.irwan.local" = {
+    #     extraConfig = ''
+    #       reverse_proxy 127.0.0.1:20128
+    #     '';
+    #   };
+    # };
   };
 }
