@@ -48,11 +48,15 @@
     # Code
     gcc
     gnumake
+    cmake
+    libtool
+    libvterm-neovim
     gdb
     python315
     clang
     rustc
     zig
+    emacs-pgtk
 
     # Cert
     mkcert
