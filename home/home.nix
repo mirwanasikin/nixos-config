@@ -5,7 +5,7 @@
     inputs.spicetify-nix.homeManagerModules.default
     ./modules/foot.nix
     # ./modules/firefox.nix
-    ./modules/spicetify.nix
+    # ./modules/spicetify.nix
     ./modules/packages.nix
     ./modules/dotfiles.nix
     ./modules/fastfetch.nix
@@ -26,6 +26,8 @@
     ./modules/helium.nix
     ./modules/wordcraft.nix
     ./modules/claude.nix
+    ./modules/doom-lsp.nix
+    ./modules/emacs.nix
     # ./modules/deckcraft.nix
     # ./modules/gridcraft.nix
   ];

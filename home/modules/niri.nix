@@ -146,9 +146,13 @@
           hotkey-overlay.title = "Run an Application: noctalia";
         };
 
+        "Mod+E" = {
+          action = spawn-sh "emacsclient -c";
+        };
+
         "Mod+B" = {
           action = spawn-sh "helium";
-          hotkey-overlay.title = "Run an Application: Firefox";
+          hotkey-overlay.title = "Run Helium Browser";
         };
 
         "Super+Alt+L" = {

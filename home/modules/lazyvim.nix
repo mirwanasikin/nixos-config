@@ -71,6 +71,8 @@
         vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "NONE" })
         vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "NONE" })
         vim.opt.termguicolors = true
+
+        vim.g.trouble_lualine = false
       '';
 
       autocmds = ''

@@ -25,6 +25,7 @@ graphify-out
 
 # Python
 __pycache__
+.ruff_cache
 
 # Rust / Nix local builds
 target/

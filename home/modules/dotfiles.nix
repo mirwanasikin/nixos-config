@@ -23,6 +23,7 @@ _:
       enable = true;
 
       settings = {
+        overrideGpg = true;
         git.commit.signOff = true;
       };
     };
@@ -64,6 +65,7 @@ _:
       enable = true;
       nix-direnv.enable = true;
     };
+
   };
 
 }

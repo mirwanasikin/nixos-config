@@ -36,6 +36,7 @@
 
     # Python
     ruff
+    pyright
     python315
   ];
 }

@@ -48,6 +48,9 @@
     # Code
     gcc
     gnumake
+    cmake
+    libtool
+    libvterm-neovim
     gdb
     python315
     clang
