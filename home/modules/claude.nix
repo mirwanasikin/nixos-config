@@ -2,11 +2,11 @@
 
 let
   pname = "claude-desktop";
-  version = "4.4212.0";
+  version = "4.16336.0";
 
   src = pkgs.fetchurl {
-    url = "https://downloads.claude.ai/releases/linux/x64/${version}/Claude-cbfe3c56d49c49332ad5a9588303c9dbc70a5e7f.deb";
-    sha256 = "113szpxqnbg8c00ajgpcn1hy5g6zh5r2i4r5p053k5f81y76bksg";
+    url = "https://downloads.claude.ai/claude-desktop/apt/stable/pool/main/c/claude-desktop/claude-desktop_4.16336.0_amd64.deb";
+    hash = "sha256-OBBzPpN5L3Dq6SEXXRPlPRzGvc6dwjEX8FiAh1IaZLw=";
   };
 
   claude-desktop-pkg = pkgs.stdenv.mkDerivation {

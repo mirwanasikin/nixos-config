@@ -57,7 +57,9 @@
     rustc
     zig
     emacs-pgtk
-
+    ((pkgs.emacsPackagesFor pkgs.emacs-pgtk).emacsWithPackages (epkgs: [
+      epkgs.treesit-grammars.with-all-grammars
+    ]))
     # Cert
     mkcert
     nssTools

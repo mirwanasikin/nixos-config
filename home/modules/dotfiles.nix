@@ -23,6 +23,7 @@ _:
       enable = true;
 
       settings = {
+        overrideGpg = true;
         git.commit.signOff = true;
       };
     };
