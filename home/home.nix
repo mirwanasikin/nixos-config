@@ -26,7 +26,6 @@
     ./modules/helium.nix
     ./modules/wordcraft.nix
     ./modules/claude.nix
-    ./modules/doom-lsp.nix
     ./modules/emacs.nix
     # ./modules/deckcraft.nix
     # ./modules/gridcraft.nix

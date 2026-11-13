@@ -12,8 +12,8 @@
   # NOTE: Kernel Latest
   boot = {
     # Latest, Zen and RC
-    kernelPackages = pkgs.linuxKernel.packages.linux_testing; # Kernel RC
-    # kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
+    # kernelPackages = pkgs.linuxKernel.packages.linux_testing; # Kernel RC
+    kernelPackages = pkgs.linuxPackages_latest; # Kernel Latest
     # kernelPackages = pkgs.linuxKernel.packages.linux_zen; # Kernel zen
 
     # Kernel LTS

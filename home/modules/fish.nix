@@ -85,6 +85,7 @@ in
 
       # Complex
       vif = "fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always {}' | xargs nvim";
+      restart-emacs = "systemctl --user restart emacs";
     };
 
   };
