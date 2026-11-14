@@ -44,7 +44,9 @@ With NixOS, if an app or tweak isn't written down in this repository, **it does 
 
 I am a touch typist. Reaching for the mouse feels like a penalty—it interrupts thought and breaks the rhythm of typing.
 
-Terminal applications and TUIs are fast, predictable, keyboard-driven, and consume virtually zero system resources. For that reason, 95% of my computing happens inside Foot, Tmux, and Neovim.
+Terminal applications and TUIs are fast, predictable, keyboard-driven, and consume
+virtually zero system resources. For that reason, 95% of my computing happens inside
+Foot, Tmux, Neovim, and Emacs.
 
 What about GUI apps? A select few survive (like a web browser, because browsing modern web in w3m is an act of pure masochism). For the handful of GUI applications that made the cut: **feel free to snoop around the config files (`home/modules/`) to see what survived.**
 
@@ -69,17 +71,17 @@ This vintage hardware is exactly _why_ I default to CLI tools—every GUI byte c
 ## ⌨️ The Daily Drivers
 
 | Layer              | Tool                                      | Why                                      |
-| :----------------- | :---------------------------------------- | :--------------------------------------- |
+|:-------------------|:------------------------------------------|:-----------------------------------------|
 | **Compositor**     | Niri (scrollable tiling) + Noctalia       | Wayland-native, no X baggage             |
 | **Terminal**       | Foot                                      | Blazing fast Wayland terminal            |
 | **Multiplexer**    | Tmux                                      | Persistent sessions, split panes         |
 | **Shell**          | Fish + Starship                           | Sensible defaults, beautiful prompt      |
-| **Editor**         | LazyVim (Neovim)                          | Preconfigured IDE via flake input        |
+| **Editor**         | LazyVim (Neovim), Doom Emacs                          | Preconfigured IDE via flake input  and Doom Emacs was so cool       |
 | **File Manager**   | Yazi                                      | TUI, vim motions, image previews         |
 | **System Monitor** | htop, btop                                | Because `top` is boring                  |
 | **Fuzzy Find**     | fzf, fd, ripgrep                          | Fast, keyboard-driven search             |
 | **Music**          | Spicetify (Spotify) + Spotatui            | GUI when I feel fancy, TUI otherwise     |
-| **Browser**        | Firefox + w3m                             | Modern web + emergency terminal browsing |
+| **Browser**        | Helium + w3m                              | Modern web + emergency terminal browsing |
 | **Notes**          | Obsidian                                  | The one GUI I actually need              |
 | **DevOps**         | k9s, kubectl, awscli2, terraform, ansible | Kubernetes/cloud wrangling               |
 
