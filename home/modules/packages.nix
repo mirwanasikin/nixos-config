@@ -59,6 +59,14 @@
     # Browser
     w3m
 
+    # Email
+    mu
+    isync
+    msmtp
+    pass
+    gnupg
+    pinentry-curses
+
     # Vibe Coding
     # chatgpt
     opencode

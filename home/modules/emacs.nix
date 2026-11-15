@@ -5,6 +5,7 @@
     enable = true;
     package = (pkgs.emacsPackagesFor pkgs.emacs-pgtk).emacsWithPackages (epkgs: [
       epkgs.treesit-grammars.with-all-grammars
+      epkgs.mu4e
     ]);
   };
 
