@@ -34,10 +34,7 @@
     };
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
-    quadlet-nix = {
-      url = "github:mirkolenz/quadlet-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    quadlet-nix.url = "github:mirkolenz/quadlet-nix";
     # hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
